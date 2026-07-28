@@ -1,0 +1,58 @@
+\section{Reading map}\label{sec:overview}
+
+The proof can be read at two speeds.  For the classification spine,
+follow the three rows of Table~\ref{tab:dependency-map}; the intervening
+definitions and lemmas discharge the cited carrier, collision, and
+point-count steps.  Table~\ref{tab:classification-status} separately
+records where a split-free classification needs a covering-radius
+input before it becomes a deep-hole classification.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Fast path through the classification proofs.}
+\label{tab:dependency-map}
+\begin{tabular}{p{0.09\textwidth}p{0.48\textwidth}p{0.31\textwidth}}
+\toprule
+Result & Load-bearing printed argument & Imported input\\
+\midrule
+R5 & Hankel dictionary; gcd strata; cyclic descent; integral $(2,2)$
+fiber square and point bound &
+lower tangent/secant families; high-rate radius theorem; singular-curve
+bound\\
+R6 & one-marker polar line; ordinary and binary contained components;
+transverse escape &
+R5 lower package and radius gate\\
+R7 & two-marker contraction; complete second-marker bad scheme,
+including cyclic and fixed-gcd collisions; contained rank-two theorem;
+transverse escape &
+R5/R6 lower packages; separate covering-radius result\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\small
+\caption{Classification status by redundancy.  ``Unconditional''
+refers to the displayed field range.  A split-free classification
+becomes a deep-hole classification only after the separate radius
+gate.}
+\label{tab:classification-status}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{p{0.05\textwidth}p{0.13\textwidth}
+                p{0.24\textwidth}p{0.27\textwidth}
+                p{0.19\textwidth}}
+\toprule
+Red. & Field range & Split-free geometry & Deep holes/MDS extensions
+& Remaining gap\\
+\midrule
+$5$ & $q\geq7$ & Complete, unconditional & Complete,
+unconditional; $\rho=4$ & None\\
+$6$ & $q\geq7$ & Complete, unconditional & Complete,
+unconditional; $\rho=5$ & None\\
+$7$ & $q\geq7$ & Complete, unconditional & Complete for $q\geq11$;
+conditional on $\rho=6$ at $q=7,8,9$ & Radius at $q=7,8,9$\\
+\bottomrule
+\end{tabular}
+\end{table}

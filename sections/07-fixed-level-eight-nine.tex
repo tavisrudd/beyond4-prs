@@ -1,0 +1,890 @@
+\section{A fixed-level high-field application}\label{sec:fixed}
+
+\subsection{Redundancy eight}
+
+\begin{proposition}[Generic three-marker bottom cover]\label{prop:r8-bottom}
+After three contractions, the generic bottom object is the R5
+off-diagonal $(2,2)$ curve.  The diagonal and branch deletion costs
+twelve and three marked roots cost eighteen, so
+$\delta=30$.  The inequality
+\[
+       q+1-2\sqrt q>30
+\]
+holds at every prime power $q\geq43$.  The first-polar line has
+transverse/collision budget
+\[
+       3+1+10=14,
+\]
+where ten is the ramification degree of a moving $g^4_6$.
+\end{proposition}
+
+\begin{proof}
+Markers do not change the bottom curve or its geometric monodromy;
+each removes at most the six ordered pairs in its unique cubic fiber.
+The point bound uses the \(\kappa=1\) convention of
+Remark~\ref{rem:thresholds}.  A noncontained line meets the lower
+rank-two catalecticant carrier in degree at most three, and the lower
+binary central point in at most one parameter.  After fixed factors are
+removed, self-collision is ramification of a separable $g^4_6$, of
+degree $(4+1)(6-4)=10$.  Separability follows because the
+$p$-th-power subspace has dimension smaller than the five-dimensional
+series.
+\end{proof}
+
+\begin{definition}[Three-marker lower-package gate]
+\label{def:r8-lower-package}
+The assertion $\mathrm{LP}(6,1)$ says that the pointed R7 splitting
+incidence, after the persistent rank-two carrier, the binary central
+point, and the marked-collision divisor are removed, has the
+geometrically integral identity twists and deletion bounds used in
+Proposition~\ref{prop:r8-bottom}.  It includes equations and
+monodromy checks for the recursive cyclic, wild, inseparable, gcd, and
+branch strata; a finite-field regression is not a substitute for those
+geometric data.
+\end{definition}
+
+The ordered cover retains the marker labels needed for monodromy, but
+the contraction itself descends to the unordered marker cubic.  Indeed,
+for affine markers \(r,s,t\),
+\begin{equation}\label{eq:r8-marker-cubic}
+ a_i^{\langle r,s,t\rangle}
+ =a_{i+3}-(r+s+t)a_{i+2}
+ +(rs+rt+st)a_{i+1}-rst\,a_i .
+\end{equation}
+Thus it depends only on the elementary symmetric functions of the
+markers, equivalently on the monic cubic
+\(T^3-(r+s+t)T^2+(rs+rt+st)T-rst\).  This separates the symmetric
+contraction parameter from the ordered-root cover used below.
+
+\begin{lemma}[Bottom strata]\label{lem:r8-bottom-strata}
+For the two-step contraction of a pointed sextic, the lower rank,
+gcd-one, cyclic, wild, inseparable, and branch strata are exactly the
+closed schemes displayed below.  The reversed homogeneous chart
+introduces no additional stratum.
+\end{lemma}
+
+\begin{proof}
+For a pointed sextic
+$f=(a_0,\ldots,a_6)$ with old marker $x$, contract successively:
+\[
+ b_i(r)=a_{i+1}-ra_i,\qquad
+ c_i(r,s)=b_{i+1}(r)-sb_i(r).
+\]
+For $c=(c_0,\ldots,c_4)$ put
+\[
+ H_c=\begin{pmatrix}c_0&c_1&c_2&c_3\\
+                     c_1&c_2&c_3&c_4\end{pmatrix}.
+\]
+On the rank-two-kernel chart, if $p_0,p_1$ span $\ker H_c$, the bottom
+ordered-root curve is
+\begin{equation}\label{eq:r8-bottom-cover}
+ G_c(u,v)=
+ \frac{p_0(u)p_1(v)-p_1(u)p_0(v)}{[u,v]}=0.
+\end{equation}
+The rank-at-most-two secant carrier, including the gcd-two and
+rank-drop boundary strata, is
+\begin{equation}\label{eq:r8-secant-carrier}
+ D(c)=\det\begin{pmatrix}
+ c_0&c_1&c_2\\c_1&c_2&c_3\\c_2&c_3&c_4
+ \end{pmatrix}=0.
+\end{equation}
+For an exact common root $z$, the gcd-one incidence is cut out by
+\begin{equation}\label{eq:r8-gcd-one}
+ \operatorname{rank}
+ \begin{pmatrix}H_c\\1&z&z^2&z^3\end{pmatrix}\leq2.
+\end{equation}
+with the evident homogeneous row at infinity.  After substitution,
+\eqref{eq:r8-secant-carrier} has degree at most three in $s$, while
+each $3$-minor in \eqref{eq:r8-gcd-one} has degree at most two for
+fixed $z$.
+
+The remaining reducible-monodromy carriers are explicit.  Put
+$z_i=\binom4i c_i$.  Outside characteristics two and three the cyclic
+closure is
+\begin{equation}\label{eq:r8-cyclic-veronese}
+ [u:v:w]\longmapsto
+ [u^2:2uv:v^2+2uw:2vw:w^2],
+\end{equation}
+a degree-four projected Veronese surface containing no line.  In
+characteristic three it is the degree-four cone
+$\Join(e_2,C_4)$; its only lines are rulings, and the consecutive-row
+overlap excludes every ruling as a polar line.  In characteristic two
+it is
+\begin{equation}\label{eq:r8-cyclic-binary}
+ \Pi_{\rm cyc}=\PP\langle e_1,e_2,e_3\rangle,\qquad c_0=c_4=0.
+\end{equation}
+whose unique contained polar-line component is
+$\cN_3=\PP\langle e_2,e_3\rangle$.  The inseparable degeneration is
+the derivative-minor locus of $p_0,p_1$ and introduces no further
+stratum.  Outside characteristics two and three a nonconstant
+degree-three map cannot factor through Frobenius.  In characteristic
+three an inseparable cubic pencil is projectively
+$\langle X^3,Y^3\rangle$; the two Hankel rows then force
+$c_0=c_1=c_3=c_4=0$, the vertex $e_2$ of the wild cone.  In
+characteristic two, after cancelling a nonzero pencil gcd, an inseparable
+ratio has degree at most two and is a rational function of $t^2$.
+Homogenizing its numerator and denominator to cubics supplies the
+same linear factor to both, so it belongs to the exact-gcd-one
+boundary.  Finally, the branch equation on this chart is
+$p_0'p_1-p_0p_1'=0$.  These carrier and branch loci are the
+scheme-theoretic images of the displayed incidences (equivalently their
+Fitting-minor ideals); the reversed homogeneous chart supplies infinity.
+Thus these are closed strata over the coefficient ring, not a
+classification only of their rational points.
+\end{proof}
+
+\begin{lemma}[Bottom monodromy and deletion]\label{lem:r8-monodromy}
+Off the strata of Lemma~\ref{lem:r8-bottom-strata}, the bottom
+ordered-root curve is geometrically integral of arithmetic genus one
+and has deletion degree at most $30$.  On the exact-gcd-one stratum,
+the residual deck graph supplies a squarefree pair avoiding the three
+markers for $q\geq43$.
+\end{lemma}
+
+\begin{proof}
+Off \eqref{eq:r8-secant-carrier}--\eqref{eq:r8-cyclic-binary}, the
+separable cubic map is noncyclic, so its geometric
+monodromy is $S_3$.  Transitivity on ordered pairs of distinct roots
+makes \eqref{eq:r8-bottom-cover} geometrically integral.  It has
+arithmetic genus one.
+The diagonal costs four, the degree-four different costs at most
+eight off-diagonal ordered pairs, and each of the three marker fibers
+$x,r,s$ costs at most six.  Thus
+\begin{equation}\label{eq:r8-deletion}
+ \delta\leq4+8+3\cdot6=30.
+\end{equation}
+Hasse--Weil supplies a surviving rational point for every $q\geq43$.
+
+It remains to show that the strata removed above do not hide another
+component.  On an exact-gcd-one bottom stratum write the cubic pencil
+as $\ell_zQ$, with $Q$ a basepoint-free pencil of quadratics.  In the
+separable case its deck involution $\iota$ is rational, so its graph
+has $q+1$ rational points.  At most two are fixed and at most two
+ordered graph points involve each of $z,x,r,s$.  A point remains for
+$q\geq43$, giving three distinct roots outside the markers.  The
+inseparable degree-two case is on the rank/boundary carrier.
+\end{proof}
+
+\begin{lemma}[Two-marker selection]\label{lem:r8-two-marker}
+Fix two old markers $x,r$.  Outside the declared contained strata,
+the bad divisor on the internal $s$-line has degree at most $19$.
+For $q\geq43$ one can choose $s$ so that the lower package supplies a
+split squarefree quartic avoiding $x$ and $r$.
+\end{lemma}
+
+\begin{proof}
+The complete divisor table on the $s$-line is
+\[
+\begin{array}{c|c|c}
+\text{failure}&\text{defining mechanism}&\text{degree}\\\hline
+\text{rank at most two}&D(c(s))&3\\
+\text{cyclic/wild monodromy}&\text{pullback of
+\eqref{eq:r8-cyclic-veronese}--\eqref{eq:r8-cyclic-binary}}&4\\
+\text{new gcd root }s&\operatorname{Ram}(g^2_d),\ d\le4&6\\
+\text{gcd root }x\text{ or }r&\text{one nonzero minor in
+\eqref{eq:r8-gcd-one}}&2+2\\
+\text{marker collision}&s=x,\ s=r&2
+\end{array}
+\]
+In characteristic two the cyclic entry has degree one, so degree four
+is a uniform bound.  The total is
+\begin{equation}\label{eq:r8-inner-budget}
+ 3+4+6+2+2+2=19<q+1.
+\end{equation}
+The rank pullback cannot be the whole line:
+Proposition~\ref{prop:r6-secant} identifies that containment exactly
+with quadratic gcd of the original net.  The only possible contained
+cyclic line is the declared binary nucleus.  For a fixed marker, not
+all minors in \eqref{eq:r8-gcd-one} can vanish identically without
+giving the original
+quartic net that fixed factor: otherwise the hyperplanes
+$W\cap\ker(\operatorname{ev}_s)$ and
+$W\cap\ker(\operatorname{ev}_x)$ agree for dense $s$, making
+the evaluation map constant.  Choose one nonzero quadratic minor.
+For self-collision, take a generic pencil projection of the moving
+$g^2_d$, $d\leq4$.  It is separable: in characteristic two the only
+dimension-three equality case is the pure-square space
+$\langle1,t^2,t^4\rangle$, which the consecutive Hankel overlap
+equations do not realize; all other $p$-power spaces have smaller
+dimension.  Riemann--Hurwitz gives degree at most $2d-2\leq6$, and
+every self-collision maps into this ramification divisor.
+Choosing $s$ outside this divisor and applying the preceding
+gcd-zero or gcd-one bottom analysis gives a split squarefree quartic
+avoiding the two old markers.  This proves the two-old-marker lemma.
+\end{proof}
+
+\begin{lemma}[Outer marker selection]\label{lem:r8-outer-selection}
+For a pointed sextic outside the persistent and modular contained
+strata, the bad divisor on the outer first-marker line has degree at
+most $15$.  A surviving outer marker lifts the witness of
+Lemma~\ref{lem:r8-two-marker} to a split squarefree quintic avoiding
+the original marker.
+\end{lemma}
+
+\begin{proof}
+The lower rank-two pullback costs three
+parameters and the binary nucleus costs one.  If a contracted net has
+exact gcd $\ell_z$, the condition $z=r$ maps into the ramification of
+a generic separable pencil projection of the moving $g^3_d$, $d\leq5$.
+Riemann--Hurwitz bounds it by $2d-2\leq8$.  The condition $z=x$ is
+again \eqref{eq:r8-gcd-one}, now with the quartic evaluation row, and
+costs at most two
+because not all of its quadratic minors vanish off the fixed-marker
+boundary, by the same evaluation-hyperplane argument.  Together
+with $r=x$, the internal divisor has degree
+\begin{equation}\label{eq:r8-outer-budget}
+ 3+1+8+2+1=15.
+\end{equation}
+If the contracted net has trivial gcd, the two-old-marker lemma applies.
+If it has exact gcd with $z\notin\{x,r\}$, the ordered-pair argument has three
+$(1,1)$ and two $(2,1)/(1,2)$ bad equations, at most
+$12(q+1)<(q-2)(q-3)$.  The cases $z=x,r$ are precisely the excluded
+quadratic and ramification divisors.
+Lifting first by $\ell_s$ and then by $\ell_r$ gives a split
+squarefree quintic avoiding $x$.
+\end{proof}
+
+\begin{proposition}[Pointed lower package]\label{prop:r8-lp61}
+The assertion $\mathrm{LP}(6,1)$ holds.  On the outer first-marker
+line its exceptional divisor has degree at most fifteen; on the
+recursive second-marker line the corresponding divisor has degree at
+most nineteen.  Its only positive-genus identity twist is the
+geometrically integral off-diagonal $(2,2)$ curve of genus at most one
+with deletion degree $30$.
+\end{proposition}
+
+\begin{proof}
+Lemmas~\ref{lem:r8-bottom-strata} and \ref{lem:r8-monodromy} identify
+the bottom strata and the unique positive-genus identity twist.
+Lemmas~\ref{lem:r8-two-marker} and \ref{lem:r8-outer-selection} give
+the two parameter-line budgets and the coherent squarefree lift.  For
+auditability, the complete exhaustion is summarized here.
+
+\begin{center}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{p{0.12\textwidth}p{0.21\textwidth}p{0.08\textwidth}
+                p{0.19\textwidth}p{0.21\textwidth}}
+\toprule
+Stratum & Defining equation & Degree & Contained case &
+Transverse conclusion\\
+\midrule
+rank at most two & \eqref{eq:r8-secant-carrier} &
+$3$ in the marker & quadratic-gcd persistent carrier &
+finite intersection of degree at most $3$\\
+cyclic or wild & \eqref{eq:r8-cyclic-veronese} or
+\eqref{eq:r8-cyclic-binary} & at most $4$ &
+only the binary nucleus line & finite intersection of degree at most
+$4$\\
+exact gcd one & minors in \eqref{eq:r8-gcd-one} &
+$2$ per fixed marker & fixed-factor boundary &
+the residual deck graph supplies a squarefree pair\\
+inseparable & derivative minors of $p_0,p_1$ & absorbed above &
+wild vertex, rank drop, or binary nucleus & no additional stratum\\
+geometric $S_3$ & \eqref{eq:r8-bottom-cover} &
+bidegree $(2,2)$ & only the preceding carriers &
+integral genus-one cover with deletion degree $30$\\
+marker collision & diagonals and ramification &
+$1$ per diagonal; at most $6$ for self-collision &
+declared collision boundary & finite divisor on the marker line\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The gcd has degree zero, one, or at least two, and a separable
+gcd-zero cubic cover has monodromy $S_3$ or $C_3$; hence the displayed
+list is exhaustive.  No certificate or finite-field regression is
+used for this integrality assertion.  Notice also that the outer and
+recursive parameter budgets $15$ and $19$ are already strictly below
+$q+1$ for $q\geq19$; the threshold $43$ is imposed solely by the
+genus-one deletion inequality~\eqref{eq:r8-deletion}, not by a hidden
+parameter-choice
+bound.
+\end{proof}
+
+\begin{proposition}[Modular lifts at degree seven]\label{prop:r8-modular}
+The consecutive-row Lucas calculation leaves no nonzero lift in
+characteristic two, the line $\PP\langle e_2,e_5\rangle$ in
+characteristic three, and the line
+$\PP\langle e_3,e_4\rangle$ in characteristic five.  The latter two
+lines are shallow in the range $q\geq43$.
+\end{proposition}
+
+\begin{proof}
+Lucas' criterion applied to the consecutive binomial rows gives the
+three stated supports; the exact row reductions are replayed by
+Certificate R8.  In characteristic five, the homogenization of
+$t^5-t$ supplies six distinct projective roots and satisfies the two
+required middle-coefficient equations throughout the lift.
+
+In characteristic three, $\PGL_2(q)$ is transitive on the rational
+points of $\PP\langle e_2,e_5\rangle$, so it suffices to treat $e_2$.
+Choose nonzero $a,b,c$ with no two equal up to sign and
+$a^2+b^2+c^2=0$.  The nonsingular conic has $q+1$ points; deleting the
+three coordinate and six equality/antiequality sections costs at most
+eighteen, so a choice exists for $q\geq27$.  The reciprocal pairs
+$\pm a^{-1},\pm b^{-1},\pm c^{-1}$ give six distinct roots and the two
+required elementary-symmetric coefficients vanish.
+\end{proof}
+
+\begin{proposition}[Degree-seven contained components]
+\label{prop:r8-contained}
+The assertion $\mathrm{CC}(7,1)$ for the structural components of
+Definition~\ref{def:r8-lower-package} holds in every characteristic.
+The rank-two component lifts to the upper rank-two carrier; the lower
+binary central point has no nonzero coherent lift; and the
+marked-collision scheme is never the whole polar line.  The only
+additional nucleus lifts are
+\[
+ \PP\langle e_2,e_5\rangle\quad\text{in characteristic three},
+ \qquad
+ \PP\langle e_3,e_4\rangle\quad\text{in characteristic five},
+\]
+and both are shallow in the range $q\geq43$.
+\end{proposition}
+
+\begin{proof}
+The rank-two assertion is
+Proposition~\ref{prop:contained-rank-two} with $n=7$.  For the binary
+central point $e_3$, requiring both consecutive septic rows to be
+supported at its single coordinate permits $a_3$ in the first row and
+$a_4$ in the second; their overlap is zero.  Thus its projective
+coherent lift is empty.  The full nucleus-support overlap is exactly
+Proposition~\ref{prop:r8-modular}, which also supplies the shallow
+witnesses in characteristics three and five.
+
+It remains to exclude an identically colliding series.  Remove the
+fixed divisor from the five-dimensional $W_f$ and let the moving
+degree be $d\leq6$.  If its projective map were inseparable in
+characteristic $p$, it would factor through Frobenius, so its section
+space would have dimension at most
+\[
+ \left\lfloor d/p\right\rfloor+1\leq4,
+\]
+contrary to $\dim W_f=5$.  A generic pencil projection is therefore a
+separable map of degree at most six.  Every marked self-collision is a
+ramification point of that projection, so Riemann--Hurwitz bounds the
+collision divisor by $2d-2\leq10$.  It is finite and cannot be an
+additional contained component.
+\end{proof}
+
+\begin{remark}[Exact remaining R8 gate]\label{rem:r8-contained}
+Proposition~\ref{prop:r8-contained} closes the contained-component
+problem, while Proposition~\ref{prop:r8-lp61} closes the pointed lower
+package.  The certificate checks the nucleus overlaps, witnesses, and
+numerical budgets; the geometric integrality and recursive carrier
+equations are proved separately above.
+\end{remark}
+
+\begin{theorem}[Redundancy eight]\label{thm:r8}
+For every prime power $q\geq43$, the deep
+syndromes of $\PRS(q-7)$ are
+exactly the persistent tangent and conjugate-secant families, of total
+size $q(q+1)^2/2$.  Their orbit law is $T/T^7$ modulo inversion and
+Frobenius.  The tangent family splits exactly in characteristic seven.
+\end{theorem}
+
+\begin{proof}
+Outside the contained locus, Proposition~\ref{prop:r8-bottom} chooses a
+good first contraction, and Proposition~\ref{prop:r8-lp61} supplies a
+three-marker witness.  Propositions~\ref{prop:r8-modular} and
+\ref{prop:r8-contained} eliminate every nonpersistent contained lift.
+The imported covering-radius theorem promotes the resulting split-free
+classification to deep holes.
+\end{proof}
+
+This theorem makes no assertion about additional deep orbits for
+$q<43$.
+
+\iffalse
+\subsection{Redundancy nine}
+
+\begin{definition}[R9 pointed domain]\label{def:r9-pointed-domain}
+The assertion $\mathrm{LP}(7,1)$ is made on the pointed splitting
+incidence after removing the persistent rank-two carrier, the complete
+characteristic-specific Lucas-nucleus support, and the fixed-marker and
+self-collision components.  At every recursive level, a polar line
+contained in one of these supports belongs to that declared closed
+boundary; the parameter-divisor argument applies only to the
+noncontained line.  Thus a section that vanishes identically is never
+counted as a finite divisor of its nominal degree.
+\end{definition}
+
+\begin{proposition}[Four-marker pointed lower package]
+\label{prop:r9-budgets}
+The assertion $\mathrm{LP}(7,1)$ holds for every $q\geq53$.
+Its bottom identity twist is the geometrically integral off-diagonal
+$(2,2)$ curve of Proposition~\ref{prop:r8-lp61}, now with four
+forbidden markers and deletion degree
+\begin{equation}\label{eq:r9-deletion}
+       4+8+4\cdot6=36.
+\end{equation}
+The three recursive parameter-line budgets, from the bottom upward,
+are at most $22$, $18$, and $18$.  At the top degree-eight
+first-polar line the transverse/component budget is at most
+\begin{equation}\label{eq:r9-top-budget}
+       3+2+12=17.
+\end{equation}
+No geometric-integrality, gcd, or contained-component assertion is
+included merely as a number in these budgets.
+\end{proposition}
+
+\begin{proof}
+We retain the notation and the scheme-theoretic strata
+\eqref{eq:r8-bottom-cover}--\eqref{eq:r8-cyclic-binary}.  Their
+homogeneous incidence ideals commute with further
+contraction, so adding a marker changes only the corresponding
+evaluation and diagonal pullbacks; it does not change the bottom
+cover.  We prove the package in three steps.
+
+\emph{Three-pointed quartic net.}
+Let $W$ be a trivial-gcd Hankel net of quartics, let
+$x_1,x_2,x_3$ be distinct prescribed markers, and exclude the
+characteristic-two nucleus already listed in
+\eqref{eq:r8-cyclic-binary}.  Contract at a
+fourth parameter $s$.  On the resulting cubic pencil the rank
+pullback \eqref{eq:r8-secant-carrier}, the cyclic/wild pullback
+\eqref{eq:r8-cyclic-veronese}--\eqref{eq:r8-cyclic-binary}, and
+self-collision
+have degrees at most $3$, $4$, and $6$, respectively.  For each
+$x_i$, choose a nonzero quadratic minor in \eqref{eq:r8-gcd-one}; the
+three fixed-root
+pullbacks cost at most $6$, and the three equations $s=x_i$ cost $3$.
+Thus the parameter divisor has degree at most
+\begin{equation}\label{eq:r9-three-point-budget}
+             3+4+6+3\cdot2+3=22.
+\end{equation}
+None of these equations vanishes identically.  For the rank and
+cyclic carriers this is the no-contained-line calculation following
+\eqref{eq:r8-inner-budget}.  For a fixed marker, identical vanishing
+of all the minors in \eqref{eq:r8-gcd-one} would make the kernels of
+$\operatorname{ev}_{s}|_W$ and $\operatorname{ev}_{x_i}|_W$ agree
+for dense $s$.  The two nonzero functionals would then be
+proportional, making the projective evaluation map of the
+three-dimensional trivial-gcd net $W$ constant, a contradiction.
+For self-collision, a generic pencil projection of the moving
+$g^2_d$, $d\leq4$, is separable by the pure-power dimension argument
+following \eqref{eq:r8-inner-budget}, and Riemann--Hurwitz gives
+degree at most $6$.
+
+Away from this divisor, a gcd-zero cubic pencil is on the geometric
+$S_3$ stratum.  Its ordered-pair cover \eqref{eq:r8-bottom-cover} is
+geometrically integral
+of genus at most one.  The diagonal and different delete at most
+$4+8$ points, and each of $x_1,x_2,x_3,s$ deletes at most the six
+ordered pairs in its cubic fiber.  This proves
+\eqref{eq:r9-deletion}.  If instead the
+cubic pencil has exact gcd $\ell_z$, cancel it and use the graph of
+the rational deck involution of the residual quadratic pencil.  The
+graph has $q+1$ rational points; at most two are fixed, and at most two
+involve each of $z,x_1,x_2,x_3,s$.  Since $q+1>12$, a graph point
+remains.  In the inseparable quadratic case the characteristic is two
+and, after a root-coordinate change, the residual pencil is
+$\langle T^2,U^2\rangle$.  On the affine chart
+$\ell_z=t-z$, its two kernel cubics have coefficient vectors
+\[
+             (-z,1,0,0),\qquad(0,0,-z,1).
+\]
+The two overlapping Hankel rows give successively
+\[
+ c_1=zc_0,\quad c_2=z^2c_0,\quad
+ c_3=z^3c_0,\quad c_4=z^4c_0.
+\]
+Hence the determinant \eqref{eq:r8-secant-carrier} vanishes; the
+homogeneous $z=\infty$
+chart gives the endpoint.  Thus the inseparable case really lies on
+the rank-drop carrier.  Multiplication by $\ell_s$ gives a split
+squarefree quartic avoiding $x_1,x_2,x_3$.
+
+\emph{Two-pointed quintic series.}
+Let $f\in S_6$ carry two distinct markers $x_1,x_2$ and lie outside
+the lower persistent, binary-nucleus, fixed-marker, and collision
+boundary of Definition~\ref{def:r9-pointed-domain}; contract at $r$.
+The lower rank-two and binary-nucleus pullbacks then cost at most
+$3+1$.  If the contracted quartic net has exact gcd $\ell_z$, the
+condition $z=r$ lies in the ramification divisor of a generic
+separable projection of the moving $g^3_d$, $d\leq5$, and costs at
+most $8$.  The conditions $z=x_i$ are the two fixed-evaluation
+incidences \eqref{eq:r8-gcd-one}, each of degree at most two;
+$r=x_i$ contributes two
+diagonals.  Hence
+\begin{equation}\label{eq:r9-two-point-budget}
+             3+1+8+2\cdot2+2=18.
+\end{equation}
+The same rank, evaluation-hyperplane, and separable-projection
+arguments show that no listed pullback is the whole $r$-line off the
+declared boundary.
+
+For a trivial-gcd contracted net, the preceding three-pointed lemma
+applies to $x_1,x_2,r$.  For exact gcd $\ell_z$ away from these
+markers, cancel $\ell_z$.  In the ordered-pair parametrization of the
+residual cubic hyperplane, avoiding $z,x_1,x_2,r$ gives four
+bidegree-$(1,1)$ equations; the two root self-collisions have
+bidegrees $(2,1)$ and $(1,2)$.  Their rational zero sets contain at
+most $14(q+1)$ ordered pairs, whereas
+\[
+             (q-3)(q-4)>14(q+1)\qquad(q\geq53).
+\]
+Thus a split squarefree quartic remains.  The cases
+$z\in\{x_1,x_2,r\}$ are exactly the excluded fixed-evaluation and
+ramification divisors.  Lifting by $\ell_r$ gives a split squarefree
+quintic avoiding $x_1,x_2$.
+
+\emph{One-pointed sextic series.}
+Now let $f\in S_7$ have marker $x$ and lie in the open pointed domain
+of Definition~\ref{def:r9-pointed-domain}; contract at $r$.  The
+pullback of the lower rank-two carrier has degree at most three.  The
+complete consecutive-row Lucas calculation gives at most two linear
+nucleus-support pullbacks.  A whole binary-central line belongs to the
+binary Lucas-nucleus component, and the other whole-line possibilities
+are exactly the remaining declared modular supports, so these
+pullbacks are finite on the pointed domain.  After removing fixed
+factors, a generic
+projection of the moving $g^4_d$, $d\leq6$, is separable: an
+inseparable series of degree at most six has dimension at most
+$\lfloor6/p\rfloor+1<5$.  Its ramification degree is at most
+$2d-2\leq10$, and it contains the collision in which the new gcd root
+equals $r$.  The fixed-root incidence at $x$ costs at most two, and
+$r=x$ costs one.  The total is
+\begin{equation}\label{eq:r9-one-point-budget}
+             3+2+10+2+1=18.
+\end{equation}
+Choose $r$ off this divisor and apply the two-pointed quintic result
+with markers $x,r$.  Its quintic avoids both, so multiplication by
+$\ell_r$ gives a split squarefree sextic in $W_f$ avoiding $x$.
+This is $\mathrm{LP}(7,1)$.
+
+Finally, let $f\in S_8$ lie outside the persistent, modular, and
+self-collision components of $\mathrm{CC}(8,1)$.  Its first-polar line
+meets the lower
+rank-two carrier in degree at most three and the complete linear
+nucleus support in degree at most two.  The new-marker collision is
+ramification of a separable $g^5_d$, $d\leq7$: an inseparable series
+would have dimension at most $\lfloor7/p\rfloor+1<6$, and
+Riemann--Hurwitz gives at most $2d-2\leq12$.  This proves
+\eqref{eq:r9-top-budget} and
+excludes an additional contained collision component.
+
+The gcd at every recursive level has degree zero, one, or at least
+two.  The last case lies in the degree-appropriate rank-two
+catalecticant carrier, whose bottom equation is
+\eqref{eq:r8-secant-carrier} and whose
+contained-line pullback is
+Proposition~\ref{prop:contained-rank-two}; the degree-one case is
+treated after cancellation.  A separable gcd-zero cubic map has geometric
+monodromy $S_3$ or $C_3$, with the latter and every inseparable case
+in \eqref{eq:r8-cyclic-veronese}--\eqref{eq:r8-cyclic-binary} or the
+derivative-minor boundary.  Hence the strata are
+exhaustive.  Since
+\[
+             q+1-2\sqrt q>36
+\]
+at $q=53$ and the left side is increasing for $q>1$,
+\eqref{eq:r9-deletion} leaves a
+rational point for every $q\geq53$.  The parameter budgets
+\eqref{eq:r9-three-point-budget}--\eqref{eq:r9-one-point-budget} and
+\eqref{eq:r9-top-budget} are all smaller than $q+1$.  The first prime
+power satisfying the genus-one inequality is $53$.
+\end{proof}
+
+The only substantial modular carrier occurs in characteristic seven
+and is a projective binary-quartic space.  Fixing a split quintic
+$P(t)=\sum_{i=0}^5p_it^i$ and a carrier point
+$h=(a_0,\ldots,a_4)$, put
+\[
+ H_j=\sum_{i=0}^4a_ip_{i+j}
+\]
+with $p_k=0$ outside $0\leq k\leq5$, and
+\[
+ D=H_0H_2-H_1^2,\quad
+ N_s=H_{-1}H_2-H_0H_1,\quad
+ N_u=H_{-1}H_1-H_0^2.
+\]
+Off $D=0$, the unique residual quadratic is
+\[
+       Dt^2-N_st+N_u,
+\]
+with branch polynomial $K=N_s^2-4N_uD$.  The exact residual identities
+are proved next; the geometric exhaustion of transported slices is
+kept as a separate printed gate.
+
+\begin{proposition}[Residual quadratic identities]\label{prop:r9-residual}
+With $p_k=0$ outside $0\leq k\leq5$, the two consecutive Hankel
+equations for
+\[
+       P(t)(t^2-st+u)
+\]
+are
+\[
+H_0-sH_1+uH_2=0,\qquad
+H_{-1}-sH_0+uH_1=0.
+\]
+On $D\ne0$, Cramer's rule gives
+\[
+       s=N_s/D,\qquad u=N_u/D.
+\]
+The branch divisor is $K=0$, fixed/residual collision is
+$\operatorname{Res}(P,Dt^2-N_st+N_u)=0$, and fixed-root collision is
+$\operatorname{Disc}(P)=0$.
+\end{proposition}
+
+\begin{proof}
+Expand the two consecutive coefficients annihilated by the carrier
+quartic.  The displayed linear system has determinant $D$, so Cramer's
+rule gives the residual factor.  Its discriminant is $K$.  The two
+resultants have their usual intrinsic collision meanings; consequently
+the construction commutes with scalar, $\PGL_2$, and Frobenius
+transport.
+\end{proof}
+
+\begin{proposition}[One-moving-root slice]\label{prop:r9-slice}
+Let $P=R(t)(t-x)$ with four fixed distinct roots.  Then
+$D,N_s,N_u$ have degree at most two in $x$, and $K$ has degree at most
+four.  If the squarefree reduction of $K$ is nonconstant and not a
+square, the normalization of $y^2=K(x)$ is geometrically integral of
+genus at most one.
+\end{proposition}
+
+\begin{proof}
+Each $H_j$ is affine in $x$, so its $2\times2$ minors are quadratic and
+$K$ is quartic.  In odd characteristic the squarefree nonsquare
+equation defines a geometrically integral double cover; the
+hyperelliptic genus formula gives
+$\lfloor(\deg K_{\mathrm{red}}-1)/2\rfloor\leq1$.
+\end{proof}
+
+\begin{proposition}[Binary-quartic slices and rational base selection]
+\label{prop:r9-components}
+Every nonzero geometric binary quartic has a four-root slice whose
+reduced residual cover is geometrically integral of genus at most one.
+If the quartic is rational over a characteristic-seven field
+$\F_q$ with $q>102$, the four roots may be chosen distinct and
+rational.
+\end{proposition}
+
+\begin{proof}
+Let
+\[
+ \mathcal H=\PP(\Sym^4E),\qquad
+ \mathcal B=\operatorname{Conf}_4(\PP^1).
+\]
+Over $\mathcal H\times\mathcal B$, the residual formulas define a
+universal branch quartic $K_{h,\mathbf r}(x)$.  Its subdiscriminants
+cut out the locus where the squarefree part drops degree.  Hence the
+good-slice incidence
+\[
+ \mathcal U=\{(h,\mathbf r):K_{h,\mathbf r,\mathrm{red}}
+ \text{ is nonconstant and separable}\}
+\]
+is a $\PGL_2$-stable open set.  The geometric component problem is the
+surjectivity of $\mathcal U\to\mathcal H$.  One successful
+specialization would show only generic nonemptiness; fiberwise
+surjectivity requires an open cover of quartic moduli.
+
+\begin{figure}[H]
+\centering
+\[
+\begin{array}{ccccc}
+h_L
+&\xrightarrow{\ \text{six sections}\ }&
+(\Delta_1,\ldots,\Delta_6)
+&\xrightarrow{\ \sum b_i\Delta_i=1\ }&
+\displaystyle\bigcup_iD(\Delta_i)=\mathbb A^1_L\\[6pt]
+\{4,\ 3+1,\ 2+2,\ 2+1+1\}
+&\xrightarrow{\ \operatorname{disc}=3,3,1,5\ }&
+\multicolumn{3}{c}{\text{good slices on every boundary stratum}.}
+\end{array}
+\]
+\caption{The redundancy-nine good-slice argument.  The B\'ezout
+identity covers the entire squarefree normal-form atlas; four
+root-partition calculations cover its boundary.  The conclusion is
+fiberwise surjectivity, not generic success of one specialization.}
+\label{fig:r9-slice-cover}
+\end{figure}
+
+The quotient has one one-dimensional squarefree stratum and four
+multiple-root boundary strata.  On the standard even normal-form atlas
+for the squarefree stratum, write $h_L=[1,0,L,0,1]$.  The six
+four-point sets and the coefficient vectors of $\Delta_i(L)$ and
+$b_i(L)$ are printed in Appendix~\ref{app:r9-slices}.  They are six
+test sections of the universal base family over this atlas.  Pullback
+of the branch discriminant gives $\Delta_i(L)$, and direct
+multiplication gives
+\begin{equation}\label{eq:r9-bezout}
+             \sum_{i=1}^6 b_i(L)\Delta_i(L)=1
+             \quad\text{in }\F_7[L].
+\end{equation}
+Thus the principal opens $D(\Delta_i)$ cover the normal-form atlas;
+these are six sections, not six isolated successful tests.  Transport
+moves the quartic and its four-point base together, so the existence
+statement descends despite the many-to-one normal form.  On the
+boundary, root multiplicity gives exactly the partitions
+$4,3+1,2+2,2+1+1$: there are at most three support points, and triple
+transitivity gives one orbit per partition.  Their reduced branch
+discriminants are $3,3,1,5$, respectively.  Thus every boundary orbit
+also meets $\mathcal U$, proving surjectivity.
+
+Now fix $h\in\mathcal H(\F_q)$.  Over
+$\F_q(\mathbf r)$ let $d(h)\geq1$ be the number of distinct roots of
+the generic $K_{h,\mathbf r}$.  Define $B_h(\mathbf r)$ to be its
+$d(h)$-th subdiscriminant, equivalently the corresponding nonzero
+Hermite principal minor.  This is a polynomial, not a discriminant
+after an unspecified gcd division.  Its nonvanishing after
+specialization guarantees a nonconstant separable squarefree part.
+Surjectivity over the algebraic closure proves $B_h\ne0$.
+The affine chart of four finite roots is dense in $\mathcal B$, so this
+nonempty good open meets the chart used below.
+The bad affine base locus is contained in
+\begin{equation}\label{eq:r9-base-bad}
+ B_h(\mathbf r)\prod_{i<j}(r_i-r_j)=0,
+\end{equation}
+so rational selection is avoidance of a proper divisor in configuration
+space, not a second monodromy assertion.
+
+Every coefficient of $R_{\mathbf r}(t)(t-x)$ is affine in $x$, of
+degree at most one in each $r_i$ and total $\mathbf r$-degree at most
+four.  Hence $D,N_s,N_u$ have individual degree at most two and total
+degree at most eight; $K$ has individual degree at most four and total
+degree at most sixteen.  Every quartic subdiscriminant is a Hermite
+minor of coefficient-degree at most six.  Therefore
+\begin{equation}\label{eq:r9-base-degree}
+ \deg_{r_i}B_h\leq24,\qquad \deg B_h\leq96.
+\end{equation}
+Multiplying by the four-root Vandermonde gives a nonzero polynomial of
+total degree at most $102$.  Schwartz--Zippel leaves a rational
+ordered base with distinct roots whenever $q>102$.
+\end{proof}
+
+\begin{proposition}[Good-slice deletion]\label{prop:r9-deletion}
+Once a rational base with an integral slice is fixed, the moving/fixed
+diagonal, determinant, branch, four fixed-root collisions, and
+moving-root collision delete at most, respectively,
+\[
+       8,\ 4,\ 4,\ 8,\ 8
+\]
+points on the normalized double cover.  Their total is $32$, so
+$q+1-2\sqrt q>32$ supplies a split witness.
+\end{proposition}
+
+\begin{proof}
+The projection of the normalized residual cover to the moving-root line
+has degree two.  Therefore the degree-four fixed-root diagonal and the
+degree-two determinant pull back to at most eight and four points.  The
+degree-four branch divisor is ramified and contributes at most four
+points.  For each of the four fixed roots the residual-root collision is
+linear in the moving parameter; its pullback contributes at most two
+points, for a total of eight.  The moving-root resultant has degree at
+most four and contributes at most eight points after pullback.  Removing
+their union from the normalized genus-at-most-one slice proves the claim.
+\end{proof}
+
+\begin{proposition}[Characteristic-seven finite bridges]
+\label{prop:r9-char7}
+At $q=7$, the formal carrier has exactly $819$ projective rootless
+quartics.  At $q=49$, Certificate R9-49 exhausts all
+\[
+       \frac{49^5-1}{48}=5{,}884{,}901
+\]
+projective carrier points and finds a split witness for each.
+\end{proposition}
+
+\begin{proof}
+At $q=7$, a split squarefree degree-seven projective divisor is the
+complement of one of the eight rational points.  Inclusion--exclusion
+gives
+\[
+\frac{7^5-1}{6}-8\frac{7^4-1}{6}
++28\frac{7^3-1}{6}-56\frac{7^2-1}{6}
++70\frac{7-1}{6}=819.
+\]
+The $q=49$ clause is deliberately certificate-only: one lexicographic
+five-root search stops after every carrier point has a witness.  The
+residual algebra is independently replayed, but there is no second
+exhaustive carrier implementation.
+\end{proof}
+
+\begin{proposition}[R9 persistent orbit law]\label{prop:r9-orbits}
+Put $d=\gcd(8,q+1)$.  The sigma-fiber projective orbits are the
+inversion orbits in $C_d=T/T^8$, and coefficient Frobenius acts by
+multiplication by the characteristic.  The tangent fiber is transitive
+unless the characteristic is two, when its zero and nonzero parts are
+separate.
+\end{proposition}
+
+\begin{proof}
+The nonsplit torus acts by eighth powers and its normalizer inverts the
+torus coordinate.  Thus inversion-fixed and paired classes have
+stabilizers $2d$ and $d$, respectively; coefficient Frobenius is the
+$p$-power map.  For $d=8$, it fuses the two odd pairs exactly when
+$p\equiv\pm3\pmod8$.  On the tangent fiber the unipotent action is
+$z\mapsto z+8u$, which vanishes exactly in characteristic two.
+\end{proof}
+
+\begin{proposition}[Other modular lifts]\label{prop:r9-other-modular}
+The consecutive Lucas supports leave a line in characteristic five and
+the quartic carrier above in characteristic seven; no other
+characteristic has a nonzero coherent lift.  The former line is shallow
+for every $q>5$.
+\end{proposition}
+
+\begin{proof}
+Lucas' theorem and the consecutive-row overlap give the two supports.
+In characteristic five, homogenize $t^5-t$ to include its simple root
+at infinity and multiply by a linear factor $t-a$ with
+$a\notin\F_5$.  The seven roots are distinct and the two required
+Hankel coefficients vanish.  Such an $a$ exists for every $q>5$.
+\end{proof}
+
+\begin{proposition}[Degree-eight contained components]
+\label{prop:r9-contained}
+The assertion $\mathrm{CC}(8,1)$ holds.  The ordinary contained
+component is the upper rank-two carrier.  The only modular lifts are
+the characteristic-five point and the characteristic-seven
+binary-quartic carrier of Proposition~\ref{prop:r9-components}; the
+former is shallow for every field in the theorem range.  The marked
+self-collision scheme is never the whole polar line.
+\end{proposition}
+
+\begin{proof}
+Proposition~\ref{prop:contained-rank-two} gives the ordinary component,
+and Proposition~\ref{prop:r9-other-modular} gives the complete Lucas
+overlap and the characteristic-five witness.
+
+For collision, remove the fixed divisor from the six-dimensional
+Hankel series and let its moving degree be $d\leq7$.  If the associated
+map were inseparable in characteristic $p$, its sections would lie in
+the pullback of a series of degree $\lfloor d/p\rfloor$, of dimension
+at most
+\[
+             \lfloor d/p\rfloor+1\leq4<6.
+\]
+Thus the moving series is separable.  Its ramification divisor has
+degree at most $(5+1)(7-5)=12$, so collision is finite and supplies no
+additional contained component.
+\end{proof}
+
+\begin{theorem}[Redundancy nine]\label{thm:r9}
+For every prime power $q\geq53$, the
+deep syndromes of $\PRS(q-8)$ are
+exactly the persistent tangent and conjugate-secant families, of total
+size $q(q+1)^2/2$.  Their orbit law is $T/T^8$ modulo inversion and
+Frobenius; the tangent family splits exactly in characteristic two.
+\end{theorem}
+
+\begin{proof}
+Proposition~\ref{prop:r9-budgets} handles every transverse
+nonmodular point.  Proposition~\ref{prop:r9-contained} leaves the
+persistent and modular supports.  Proposition
+\ref{prop:r9-other-modular} eliminates characteristic five.  For
+characteristic seven, the only powers below $343$ are $7$ and $49$,
+both below the headline range; at every $q=7^m\geq343$,
+Propositions~\ref{prop:r9-components} and \ref{prop:r9-deletion}
+produce a witness.  The covering-radius theorem completes the
+promotion to deep holes.
+\end{proof}
+
+Proposition~\ref{prop:r9-char7} is a carrier boundary, not part of the
+headline classification: the $q=7$ count is not a deep-hole statement
+for the inadmissible parameter $\PRS(-1)$, and the $q=49$ pass is not
+an ambient $\PP^8$ census.
+\fi

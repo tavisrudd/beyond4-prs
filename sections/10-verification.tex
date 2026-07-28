@@ -1,0 +1,83 @@
+\section{Verification and formal boundary}\label{sec:verification}
+
+No geometric classification theorem in this paper is claimed to be
+formalized in Lean.  The formal layer checks coordinate identities and
+conditional synthesis implications with the component geometry,
+rational-point existence, group actions, and certificate semantics
+kept as explicit inputs.
+
+The conceptual theorems above are accompanied by deterministic evidence
+bundles.  Table~\ref{tab:evidence} records which claims use exhaustive
+computation.  Each public label resolves, through the supplement
+schema, to its generator, certificate, replay where stated, and
+SHA-256 manifest.  Table~\ref{tab:dependency-map} gives the corresponding
+claim-level mathematical dependencies.
+
+\small
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.19\textwidth}
+                  >{\raggedright\arraybackslash}p{0.25\textwidth}
+                  >{\raggedright\arraybackslash}p{0.47\textwidth}}
+\caption{Public verification map.  Exact filenames, commands, hashes,
+domains, and stop conditions belong to the electronic supplement.}
+\label{tab:evidence}\\
+\toprule
+Public label & Verified domain & Replay and trust boundary\\
+\midrule
+\endfirsthead
+\toprule
+Public label & Verified domain & Replay and trust boundary\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+Certificate R5 & nineteen audited field records; eight-field finite
+bridge below \(23\) & independent pointwise and orbitwise replay;
+canonical representatives and exhaustion records\\
+Certificate R6 & direct scan through $q=16$; finite bridge below $29$ &
+independent syndrome replay and separate radius gate\\
+Certificate R6-NF & small exceptional normal forms & deterministic
+normal-form reconstruction; not a second implementation\\
+Certificate R7 & $q=7,8,9,11$ and finite bridge below $37$ &
+primary quotient enumeration, representative/orbit replay, and an
+independent direct-locus enumeration of the complete split-free sets and
+orbit partitions; split-free and radius flags remain separate\\
+\end{longtable}
+\normalsize
+
+Table~\ref{tab:r6-exceptional} is a deterministic projection of the
+hash-pinned public R6 and R6-NF records.  The top-level verifier
+regenerates it and checks byte-for-byte equality with the included
+source.
+
+The public labels are defined by
+\texttt{supplement/CERTIFICATE-SCHEMA.md}.  The paper-local bundle,
+literal replay commands, toolchain locks, hashes, byte counts, and
+working directories are recorded in
+\texttt{supplement/REPRODUCING.md},
+\texttt{supplement/EVIDENCE-MANIFEST.json}, and
+\texttt{supplement/RELEASE-MANIFEST.md}.  The single entry point
+\texttt{python3 supplement/verify.py} checks the bundle manifest,
+classification records and their expected hashes, and the local PDF
+and supplement-artifact rows printed in the release manifest; its
+\texttt{--replay} option runs the paper-local Python replays.
+
+The paper-facing Lean gate checks coordinate algebra and conditional
+synthesis, not the geometric classifications or rational-point
+arguments.  The exact declarations, hypotheses, axiom audit, and
+reproduction command are listed in
+\texttt{supplement/LEAN-STATEMENTS.md}.
+Lean checks the contraction algebra, degree-specific R6/R7 budget
+arithmetic, finite-record arithmetic, and conditional synthesis
+interfaces used by the R5--R7 results proved here.  Companion
+stable-component and arbitrary-level budget modules remain regression
+checked but are not
+evidence for a theorem in this paper.  Lean also checks the R5--R7
+threshold-to-range arithmetic and the exact $(q,r)=(8,6)$ endpoint used
+at redundancy six.  The formal adapter keeps the dual-GRS identification,
+Seroussi--Roth nonextendability, Dür equivalence, and the concrete
+radius proposition as separate hypotheses.
+The balanced quantum corollary has a separate cross-paper gate.  Lean
+checks its field-eight certificate arithmetic, balanced-row uniqueness,
+and the length-ten LU and transversal-Clifford specializations; the
+standard MDS--AME and one-party Choi correspondences remain explicit
+cited inputs.

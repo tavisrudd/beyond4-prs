@@ -1,18 +1,15 @@
 {
   "excluded_path_count": 12,
-  "excluded_release_outputs": [
-    "main-tit.pdf",
-    "main.pdf"
-  ],
+  "excluded_release_outputs": [],
   "excluded_symlinks": [],
   "exporter_blob": "d38f45b035738e161b53233b597538b885c4d039",
   "files": [
     {
-      "bytes": 132,
+      "bytes": 108,
       "mode": "100644",
       "path": ".gitignore",
       "role": "export-support",
-      "sha256": "b5dbe3b8704c9666fc0dca371eef65dbae0dc2061ad602164d78ceaf2b920201",
+      "sha256": "8aec252fe1e8e2a04924eeac30581deea8368b151c9e82d6601a1d6393be8b27",
       "source_blob": null
     },
     {
@@ -23,6 +20,15 @@
       "role": "verification",
       "sha256": "9d2f951a86a26a9771c8886f93cca615d655cd030a8d95c9d18252b6438d4f90",
       "source_blob": "3cb389bc70b756936f403964f3e80ec5e07b20fb"
+    },
+    {
+      "bytes": 470,
+      "mode": "100644",
+      "path": "LICENSE",
+      "rewrites": [],
+      "role": "support",
+      "sha256": "55bd30dbbfb4a62d77bfd74a183e68ac3fa392c12802e0b56ad02613b9248d7c",
+      "source_blob": "48fe1688b86d4e1feef1d929170e74cc8adff356"
     },
     {
       "bytes": 1767,
@@ -38,7 +44,7 @@
       "mode": "100644",
       "path": "PROVENANCE.md",
       "role": "provenance",
-      "sha256": "7bafd8a08872cc7f8b04b24ceb364cfa104b469865852e14dd21b6c1ca585cd1",
+      "sha256": "50923136f6c19df341ec74424b60ba1676c358ac88a10a9b9b306fe218d40718",
       "source_blob": null
     },
     {
@@ -765,7 +771,7 @@
   ],
   "paper_registry_sha256": "e3d7a09841ddaa925ef9196f1d36df4be5efa06c2fb51d1e557cd6cdde971f22",
   "repository": "beyond4-prs",
-  "repository_map_sha256": "c6ce20755b904d93ebf33e840efa9c6d3eef33b2a5777679a3c1e5e2629c0c7f",
+  "repository_map_sha256": "ea07e62132ccdf3b29a24c1d1974a0cd7ee11b77d338c33660c732cb6889428d",
   "schema_version": 1,
-  "source_commit": "7934c752b5c6b3f147354f760067bfc9adfc6d44"
+  "source_commit": "e134b0fe8a5329472940c5e8ecaabfbee2c9e4e8"
 }

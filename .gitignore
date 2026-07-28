@@ -11,5 +11,3 @@ __pycache__/
 *.run.xml
 *.synctex.gz
 *.xdv
-/main-tit.pdf
-/main.pdf

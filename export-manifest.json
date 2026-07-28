@@ -5,7 +5,7 @@
     "main.pdf"
   ],
   "excluded_symlinks": [],
-  "exporter_blob": "a4e8889f4efa6b18e800c4323d57c5439bce8ff9",
+  "exporter_blob": "d38f45b035738e161b53233b597538b885c4d039",
   "files": [
     {
       "bytes": 132,
@@ -29,7 +29,7 @@
       "mode": "100644",
       "path": "PROVENANCE.md",
       "role": "provenance",
-      "sha256": "ac784d04bf466c1a319fba1c17bdc3bd8a2e25bfa96940f4942f7aa8a2999b33",
+      "sha256": "9af8e3d81b66fcda50e2ba228de7f7e28f4ead39473bbb3f990ee07b528ae31a",
       "source_blob": null
     },
     {
@@ -344,8 +344,8 @@
       "path": "supplement/EVIDENCE-MANIFEST.json",
       "rewrites": [],
       "role": "verification",
-      "sha256": "d0cc9c43895f789386eebea7a8081a711b6f755b8b6a35ed7ca037b2d97abee7",
-      "source_blob": "e226be2119ac197cd20e33795d5ec1b1fc33e097"
+      "sha256": "55585b80891dcf109bc2bd1c8a86d10d35041d57c41fd67606764ae28e9520eb",
+      "source_blob": "2a89d4379dc65e5e3b8b3acf7cbb75e2d9af58cc"
     },
     {
       "bytes": 8807,
@@ -353,8 +353,8 @@
       "path": "supplement/EVIDENCE-ROWS.md",
       "rewrites": [],
       "role": "support",
-      "sha256": "1f5a359804ca6830b5abd12edcd361c21ddb66f0a580467e87d03454da4156b5",
-      "source_blob": "4ab7fd7ab24847dafccbb49f442b5071ac18d683"
+      "sha256": "176b4679fd4b80828534a898709fbb89f99eb8dfb324f2c94f2b55ae62eacac8",
+      "source_blob": "65a2a2cfe66d94685f3880b8e5cc13958196ee10"
     },
     {
       "bytes": 12405,
@@ -375,22 +375,22 @@
       "source_blob": "6560375d291b15e2b9195c046f2cc7b199883c6b"
     },
     {
-      "bytes": 3016,
+      "bytes": 3115,
       "mode": "100644",
       "path": "supplement/RELEASE-MANIFEST.md",
       "rewrites": [],
       "role": "support",
-      "sha256": "426afc33b15126e065361ffb645ebece2eca65f2cac28267417437c14852e57a",
-      "source_blob": "bed441de7a8d906bd95518b51a9b191787798e67"
+      "sha256": "79bca5f9d60bf202e800250312d4ed3b1beaf0dc112ffe5dbd9f8199a7a4029e",
+      "source_blob": "a26b7656609949a4517ab116ae2b923330b1ba8c"
     },
     {
-      "bytes": 6507,
+      "bytes": 6674,
       "mode": "100644",
       "path": "supplement/REPRODUCING.md",
       "rewrites": [],
       "role": "support",
-      "sha256": "8b7831ee97b9c8676ce591b55a894e58abfece77e90a8cc0356b311edf1730ea",
-      "source_blob": "ef89bebadee4872101270d7f3cb0fcc76fc6024c"
+      "sha256": "b2f38143cb2fb33b19b428be36d3cd8d0f97a6ddc58067417c7dc66a2f18fb04",
+      "source_blob": "d543839c0012bdc9095ceb789c2940993b89a8a2"
     },
     {
       "bytes": 12027,
@@ -756,7 +756,7 @@
   ],
   "paper_registry_sha256": "e3d7a09841ddaa925ef9196f1d36df4be5efa06c2fb51d1e557cd6cdde971f22",
   "repository": "beyond4-prs",
-  "repository_map_sha256": "8b5c5b4ce75f359e1e94b9dc6a707780b0eb15402bef08b970384f7808c5c579",
+  "repository_map_sha256": "c6ce20755b904d93ebf33e840efa9c6d3eef33b2a5777679a3c1e5e2629c0c7f",
   "schema_version": 1,
-  "source_commit": "3c7d73491a2593f91702f5c062f4bb612f4ac1db"
+  "source_commit": "9d5c540e06b2acd4083c498fb6d0977db708af4e"
 }

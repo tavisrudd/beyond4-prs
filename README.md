@@ -52,6 +52,12 @@ point and covering-radius theorems, group actions, and certificate semantics
 retain the explicit trust routes recorded in
 `supplement/LEAN-STATEMENTS.md`.
 
+The Lean sources are distributed in
+[`finitegeom`](https://github.com/tavisrudd/finitegeom), pinned at commit
+`77c0d6bb5a45a1aa15a0ab90b7db307e1a1804d2`. The paper-facing boundary is
+`RelativeConicArcs.Gates.PRSBeyondRedundancyFourAxiomAudit`; its 17-module
+closure and terminal axiom sets are recorded under `trust/`.
+
 ## Scope
 
 Redundancies eight and nine, ordered-Hessian geometry, arbitrary-level
@@ -59,7 +65,4 @@ stable-component assertions, and higher Lucas-carrier arithmetic are companion
 work.  They are neither manuscript theorems nor inputs to the R5--R7
 classifications.
 
-Public release remains blocked on the immutable paper and Lean exports,
-independent specialist signoffs, public identifiers, and author/account
-confirmation.  No upload or external publication is performed by the local
-verification commands.
+The local verification commands do not upload or publish artifacts.

@@ -57,6 +57,8 @@ The Lean sources are distributed in
 `77c0d6bb5a45a1aa15a0ab90b7db307e1a1804d2`. The paper-facing boundary is
 `RelativeConicArcs.Gates.PRSBeyondRedundancyFourAxiomAudit`; its 17-module
 closure and terminal axiom sets are recorded under `trust/`.
+The version-independent archival locator is the Zenodo concept DOI
+[`10.5281/zenodo.21650878`](https://doi.org/10.5281/zenodo.21650878).
 
 ## Scope
 

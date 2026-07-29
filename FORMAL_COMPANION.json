@@ -1,0 +1,14 @@
+{
+  "commit": "77c0d6bb5a45a1aa15a0ab90b7db307e1a1804d2",
+  "concept_doi": "10.5281/zenodo.21650878",
+  "gates": [
+    "RelativeConicArcs.Gates.PRSBeyondRedundancyFourAxiomAudit"
+  ],
+  "manifests": [
+    "trust/manifests/prs_beyond_redundancy_four.json",
+    "trust/areas/prs_beyond_redundancy_four.toml"
+  ],
+  "relationship": "conditional formal companion with explicit geometric assumptions",
+  "repository": "https://github.com/tavisrudd/finitegeom",
+  "schema": "finitegeom-formal-companion-v1"
+}

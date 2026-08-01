@@ -2,6 +2,12 @@
 
 [![DOI](https://zenodo.org/badge/1315346158.svg)](https://doi.org/10.5281/zenodo.21682069)
 
+## Read the paper
+
+[**Open the paper (PDF) →**](prs-beyond-redundancy-four.pdf)
+
+[**Open the TIT submission version (PDF) →**](prs-beyond-redundancy-four-tit-submission.pdf)
+
 This directory contains the manuscript
 *Deep holes of projective Reed--Solomon codes beyond redundancy four:
 exact classifications at redundancies five through seven* and its public

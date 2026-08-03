@@ -1,6 +1,6 @@
 # Deep holes beyond redundancy four
 
-[![DOI](https://zenodo.org/badge/1315346158.svg)](https://doi.org/10.5281/zenodo.21682069)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21682069.svg)](https://doi.org/10.5281/zenodo.21682069)
 
 ## Read the paper
 

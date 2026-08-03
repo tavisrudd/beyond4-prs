@@ -1,11 +1,33 @@
 # Release manifest
 
-Status: **complete local evidence bundle — external publication not performed**
+Status: **Version 1 published; Version 2 is the current local draft**
 
-The manuscript, public certificates, generators, replays, classification
-records, and toolchain locks are present under stable paper-local paths.  The
-fields explicitly marked `external publication step` are intentionally not
-claimed by this local bundle.
+Version 1 was published on 2026-07-29 in the public GitHub repository and
+archived by Zenodo.  Its immutable record is:
+
+| Version 1 field | Value |
+|---|---|
+| Paper-export repository | `https://github.com/tavisrudd/beyond4-prs` |
+| Release tag | `v0.1.0` |
+| Release commit | `0d3cea228b852c45f048c3446604ee2146219144` |
+| GitHub release | `https://github.com/tavisrudd/beyond4-prs/releases/tag/v0.1.0` |
+| Zenodo record | `21682216` |
+| Version DOI | `10.5281/zenodo.21682216` |
+| Concept DOI | `10.5281/zenodo.21682069` |
+| Source archive | `tavisrudd/beyond4-prs-v0.1.0.zip` |
+| Source archive SHA-256 | `99c02781074a47c10cf2be75289900c1f4c15650a849ece96ce08b7feba8046b` |
+| Source archive bytes | `900454` |
+| Released PDF SHA-256 | `43315c95e51c95992a09ce133862824264f23611fa8090923fc469e5aad56bec` |
+| Released PDF bytes | `238922` |
+| Public Lean repository | `https://github.com/tavisrudd/finitegeom` |
+| Public Lean revision | `77c0d6bb5a45a1aa15a0ab90b7db307e1a1804d2` |
+| Public Lean concept DOI | `10.5281/zenodo.21650878` |
+
+The fields below describe the current Version 2 working draft.  Values marked
+`external publication step` are intentionally unset for Version 2 and do not
+undo the completed Version 1 publication record.
+
+## Current Version 2 local candidate
 
 | Field | Value |
 |---|---|
@@ -20,8 +42,8 @@ claimed by this local bundle.
 | Source archive SHA-256 | computed from the immutable export archive |
 | Source archive bytes | computed from the immutable export archive |
 | PDF artifact | `prs-beyond-redundancy-four.pdf` |
-| Local built PDF SHA-256 | `43315c95e51c95992a09ce133862824264f23611fa8090923fc469e5aad56bec` |
-| Local built PDF bytes | `238922` |
+| Local built PDF SHA-256 | `526888d498f4503ac24a366610c27d4fc513ec2409003c9771a5f780d68173d6` |
+| Local built PDF bytes | `381997` |
 | PDF SHA-256 | computed from the immutable export build |
 | PDF bytes | computed from the immutable export build |
 | Toolchain lock | `supplement/toolchain/`; five pinned files with hashes below |
@@ -36,10 +58,10 @@ record SHA-256 plus exact byte count.
 
 | Manifest object | SHA-256 | Bytes |
 |---|---|---:|
-| `EVIDENCE-MANIFEST.json` | `55585b80891dcf109bc2bd1c8a86d10d35041d57c41fd67606764ae28e9520eb` | 13286 |
-| `EVIDENCE-ROWS.md` | `176b4679fd4b80828534a898709fbb89f99eb8dfb324f2c94f2b55ae62eacac8` | 8807 |
-| `package_evidence_bundle.py` | `1fa62402c1d0152a68104f03fcfa34fcca6b6419bc4c1c0801210e730b51c7c8` | 10913 |
-| `verify.py` | `f6dfcbbf5e90724efa34cc65fcbdc9b7e146b90ff4634870019febb00b21fe0c` | 14147 |
+| `EVIDENCE-MANIFEST.json` | `389db2b5ff524c5ec3c2b9412b1c66771152928d4111f94c9dd50bd8ed876115` | 20506 |
+| `EVIDENCE-ROWS.md` | `40aa4fbe542f7e45281a503d579fb7a33353009a5476d6e25cba8a82b0bbd691` | 13579 |
+| `package_evidence_bundle.py` | `54559e6e94e59d1b3152c410151f14c3039fad307a5f318b39aa2d17d34db03a` | 14585 |
+| `verify.py` | `fe9fdb9e1feafaad11667b7040e4e1bfdf2b81068495cc542357c83bf0a62dde` | 16488 |
 | `build_r6_paper_table.py` | `b46a30752ea17d85093e6181d50ca8dbd6f12386416aedc3e8509406a2060f98` | 3878 |
 
 Verify the complete local bundle from the paper directory:

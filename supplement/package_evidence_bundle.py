@@ -59,7 +59,60 @@ BUNDLES = (
         ),
     ),
     (
-        "Companion Certificate SC",
+        "Certificate R7 direct locus",
+        "r7-direct-locus-v2",
+        (
+            ("generator", "2026-08-02-r7-direct-locus-generator.py", "2026-08-02-r7-direct-locus-generator.py", "rederive"),
+            ("certificate", "2026-08-02-r7-direct-locus-certificate.json", "2026-08-02-r7-direct-locus-certificate.json", "compare"),
+            ("checker", "2026-08-02-r7-direct-locus-checker.py", "2026-08-02-r7-direct-locus-checker.py", "reconstruct"),
+            ("comparison", "2026-08-02-r7-direct-locus-public-comparison.json", "2026-08-02-r7-direct-locus-public-comparison.json", "compare"),
+        ),
+    ),
+    (
+        "Certificate R8",
+        "r8",
+        (
+            ("generator", "2026-07-23-prs-redundancy-eight.py", "2026-07-23-prs-redundancy-eight.py", "rederive"),
+            ("certificate", "2026-07-23-prs-redundancy-eight.json", "2026-07-23-prs-redundancy-eight.json", "compare"),
+            ("replay", "2026-07-23-prs-redundancy-eight-replay.py", "2026-07-23-prs-redundancy-eight-replay.py", "reconstruct"),
+        ),
+    ),
+    (
+        "Certificate R9",
+        "r9",
+        (
+            ("generator", "2026-07-23-prs-redundancy-nine.py", "2026-07-23-prs-redundancy-nine.py", "rederive"),
+            ("certificate", "2026-07-23-prs-redundancy-nine.json", "2026-07-23-prs-redundancy-nine.json", "compare"),
+            ("replay", "2026-07-23-prs-redundancy-nine-replay.py", "2026-07-23-prs-redundancy-nine-replay.py", "reconstruct"),
+            ("q49-generator", "2026-07-23-prs-redundancy-nine-q49.rs", "2026-07-23-prs-redundancy-nine-q49.rs", "rederive"),
+            ("q49-certificate", "2026-07-23-prs-redundancy-nine-q49.txt", "2026-07-23-prs-redundancy-nine-q49.txt", "compare"),
+        ),
+    ),
+    (
+        "Certificate R10",
+        "r10",
+        (
+            ("generator", "2026-07-23-prs-redundancy-ten-synthesis.py", "2026-07-23-prs-redundancy-ten-synthesis.py", "rederive"),
+            ("certificate", "2026-07-23-prs-redundancy-ten-synthesis.json", "2026-07-23-prs-redundancy-ten-synthesis.json", "compare"),
+            ("replay", "2026-07-23-prs-redundancy-ten-synthesis-replay.py", "2026-07-23-prs-redundancy-ten-synthesis-replay.py", "reconstruct"),
+        ),
+    ),
+    (
+        "Certificate Lucas M9",
+        "lucas-m9",
+        (
+            ("carrier-action-dependency", "2026-07-23-degree-nine-lucas-carrier-pgl2-strata.py", "2026-07-23-degree-nine-lucas-carrier-pgl2-strata.py", "reconstruct"),
+            ("rank-two-generator", "2026-07-24-degree-nine-rank-two-artin-schreier-avoidance.py", "2026-07-24-degree-nine-rank-two-artin-schreier-avoidance.py", "rederive"),
+            ("rank-two-certificate", "2026-07-24-degree-nine-rank-two-artin-schreier-avoidance.json", "2026-07-24-degree-nine-rank-two-artin-schreier-avoidance.json", "compare"),
+            ("rank-two-replay", "2026-07-24-degree-nine-rank-two-artin-schreier-avoidance-replay.py", "2026-07-24-degree-nine-rank-two-artin-schreier-avoidance-replay.py", "reconstruct"),
+            ("carrier-generator", "2026-08-02-higher-lucas-modular-carriers.py", "2026-08-02-higher-lucas-modular-carriers.py", "rederive"),
+            ("q16-certificate", "2026-08-02-higher-lucas-modular-carriers-q16.json", "2026-08-02-higher-lucas-modular-carriers-q16.json", "compare"),
+            ("q32-certificate", "2026-08-02-higher-lucas-modular-carriers-q32.json", "2026-08-02-higher-lucas-modular-carriers-q32.json", "compare"),
+            ("carrier-replay", "2026-08-02-higher-lucas-modular-carriers-replay.py", "2026-08-02-higher-lucas-modular-carriers-replay.py", "reconstruct"),
+        ),
+    ),
+    (
+        "Certificate SC",
         "stable-components",
         (
             ("generator-checker", "2026-07-24-r10-integral-bad-scheme-sc11.py", "2026-07-24-r10-integral-bad-scheme-sc11.py", "rederive"),
@@ -93,6 +146,7 @@ PUBLIC_SUPPLEMENT_FILES = (
     ("Certificate schema", "CERTIFICATE-SCHEMA.md"),
     ("Reproduction guide", "REPRODUCING.md"),
     ("Lean statement-adequacy source", "LEAN-STATEMENTS.md"),
+    ("TeX spacing linter", "lint_tex_spacing.py"),
 )
 
 AUXILIARY_COPIES = (

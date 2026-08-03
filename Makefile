@@ -9,25 +9,35 @@ TEX_SOURCES := main.tex main-tit.tex $(wildcard frontmatter/*.tex) \
 	sections/01-introduction.tex sections/02-overview.tex \
 	sections/03-dictionary.tex sections/04-redundancy-five.tex \
 	sections/05-polar-induction.tex sections/06-redundancies-six-seven.tex \
-	sections/10-verification.tex sections/11-provenance-boundary.tex
+	sections/07-recursive-carriers.tex \
+	sections/08-fixed-level-roadmap.tex \
+	sections/07-fixed-level-eight-nine.tex sections/09-lucas-carriers.tex \
+	sections/10-verification.tex sections/11-provenance-boundary.tex \
+	appendices/r9-slice-data.tex
 PDF_BASENAME := prs-beyond-redundancy-four
 PDF := $(PDF_BASENAME).pdf
 TIT_PDF_BASENAME := prs-beyond-redundancy-four-tit-submission
 TIT_PDF := $(TIT_PDF_BASENAME).pdf
 
-.PHONY: all check tit-check clean
+.PHONY: all check lint tit-check clean
 
-all: $(PDF)
+all: lint $(PDF)
+
+lint:
+	python3 supplement/lint_tex_spacing.py $(TEX_SOURCES)
 
 $(PDF): $(TEX_SOURCES) refs.bib
+	python3 supplement/lint_tex_spacing.py $(TEX_SOURCES)
 	$(LATEXMK) $(LATEXMK_FLAGS) -jobname=$(PDF_BASENAME) main.tex
 
-check:
+check: lint
+	python3 supplement/lint_tex_spacing.py $(TEX_SOURCES)
 	$(LATEXMK) $(LATEXMK_FLAGS) -jobname=$(PDF_BASENAME) main.tex
 	@test -f $(PDF_BASENAME).log
 	@if grep -En 'Overfull|Underfull|LaTeX (Font )?Warning|Package .* Warning|undefined references|Citation .* undefined' $(PDF_BASENAME).log; then exit 1; fi
 
-tit-check:
+tit-check: lint
+	python3 supplement/lint_tex_spacing.py $(TEX_SOURCES)
 	$(LATEXMK) $(TIT_LATEXMK_FLAGS) -jobname=$(TIT_PDF_BASENAME) main-tit.tex
 	@test -f $(TIT_PDF_BASENAME).log
 	@if grep -En 'Overfull|Underfull|LaTeX (Font )?Warning|Package .* Warning|undefined references|Citation .* undefined' $(TIT_PDF_BASENAME).log; then exit 1; fi

@@ -1,4 +1,10 @@
-\section{A fixed-level high-field application}\label{sec:fixed}
+\section{Fixed-level proofs at redundancies eight and nine}\label{sec:fixed}
+
+This appendix discharges the three- and four-marker packages needed after the
+recursive carrier theorem.  At R8 the bottleneck is the integral
+off-diagonal \((2,2)\) cover of a cubic pencil; at R9 it is rational selection
+on the residual-quadratic slices of quartic moduli.  The component and deletion
+calculations below close Theorems~\ref{thm:r8} and~\ref{thm:r9}.
 
 \subsection{Redundancy eight}
 
@@ -21,8 +27,8 @@ where ten is the ramification degree of a moving $g^4_6$.
 \begin{proof}
 Markers do not change the bottom curve or its geometric monodromy;
 each removes at most the six ordered pairs in its unique cubic fiber.
-The point bound uses the \(\kappa=1\) convention of
-Remark~\ref{rem:thresholds}.  A noncontained line meets the lower
+The point bound is the \(\kappa=1\) Aubry--Perret form used throughout.
+A noncontained line meets the lower
 rank-two catalecticant carrier in degree at most three, and the lower
 binary central point in at most one parameter.  After fixed factors are
 removed, self-collision is ramification of a separable $g^4_6$, of
@@ -389,14 +395,13 @@ Outside the contained locus, Proposition~\ref{prop:r8-bottom} chooses a
 good first contraction, and Proposition~\ref{prop:r8-lp61} supplies a
 three-marker witness.  Propositions~\ref{prop:r8-modular} and
 \ref{prop:r8-contained} eliminate every nonpersistent contained lift.
-The imported covering-radius theorem promotes the resulting split-free
+Proposition~\ref{prop:upper-radius} promotes the resulting split-free
 classification to deep holes.
 \end{proof}
 
 This theorem makes no assertion about additional deep orbits for
 $q<43$.
 
-\iffalse
 \subsection{Redundancy nine}
 
 \begin{definition}[R9 pointed domain]\label{def:r9-pointed-domain}
@@ -879,12 +884,11 @@ persistent and modular supports.  Proposition
 characteristic seven, the only powers below $343$ are $7$ and $49$,
 both below the headline range; at every $q=7^m\geq343$,
 Propositions~\ref{prop:r9-components} and \ref{prop:r9-deletion}
-produce a witness.  The covering-radius theorem completes the
-promotion to deep holes.
+  produce a witness.  Proposition~\ref{prop:upper-radius} completes the
+  promotion to deep holes.
 \end{proof}
 
 Proposition~\ref{prop:r9-char7} is a carrier boundary, not part of the
 headline classification: the $q=7$ count is not a deep-hole statement
 for the inadmissible parameter $\PRS(-1)$, and the $q=49$ pass is not
 an ambient $\PP^8$ census.
-\fi

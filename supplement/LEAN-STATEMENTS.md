@@ -3,8 +3,8 @@
 The paper-facing Lean closure is
 `RelativeConicArcs.Gates.PRSBeyondRedundancyFour`. Its companion
 `RelativeConicArcs.Gates.PRSBeyondRedundancyFourAxiomAudit` prints the axiom
-dependencies of every declaration on which the retained redundancy-five
-through redundancy-seven manuscript places Lean-level trust. The aggregate
+dependencies of every declaration on which the manuscript places
+Lean-level trust. The aggregate
 gate imports exactly the foundation, redundancy-five, polar-induction and
 redundancy-six/seven, and stable-component gates, together with the
 `PRSUniformCoveringRadius` arithmetic and literature adapter.
@@ -23,7 +23,7 @@ Declaration names below are relative to the `RelativeConicArcs` namespace.
 
 ## Manuscript declaration reconciliation
 
-The following table has one row for each of the 37 numbered lemma,
+The following table has one row for each of the 75 numbered lemma,
 proposition, theorem, or corollary labels in the TeX include graph.
 
 | Manuscript label | Lean boundary | Exact formal status |
@@ -47,7 +47,7 @@ proposition, theorem, or corollary labels in the TeX include graph.
 | `lem:old-marker-fixed-factor` | no direct declaration | Manuscript evaluation-minor and non-identical-vanishing proof; the degree bound enters the formal package as an explicit field. |
 | `lem:exact-linear-gcd-transport` | `PRSUniformCoveringRadius.exactLinearFlagParameterBudget_lt_uniformParameterBudget` and `UniformIteratedPackageInput.packages_fit_uniform_threshold` | The factor-preserving flag’s budget and simultaneous threshold use are kernel checked. Preservation of the concrete gcd under contraction is the displayed manuscript proof and an explicit formal input. |
 | `lem:identically-colliding` | no direct declaration | Manuscript reduction to the two inseparable fixed-level calculations. |
-| `thm:induction` | `PRSPolarInduction.CoherentPolarInput.splitFree_implies_persistent_or_modular` | Conditional terminal. `lowerWitness` directly supplies rational witnesses; genus, deletion, and Hasse--Weil data are carried in the interface but do not derive that field. |
+| `thm:induction` | `PRSPolarInduction.iteratedProjectiveSequenceContraction_map`; `sequenceContraction_agrees_with_finite`; `CoherentPolarInput.splitFree_implies_persistent_or_modular` | Iterated contraction and lifting algebra are kernel checked. The finite-depth marker choices and terminal point-count argument are the printed manuscript proof; concrete stagewise carrier and lower-package hypotheses remain manuscript or certificate inputs. |
 | `prop:contained-rank-two` | no direct declaration | Characteristic-free manuscript rank--nullity proof; degree-specific formal terminals consume its consequence as an input. |
 | `prop:r6-persistent` | `PRSRedundancySixSeven.PersistentModularFamilyData.classified_card_doubled`; `PRSPolarInduction.fifthPower_sigmaInversionOrbitCount`; tangent-translation terminals | Cardinality and quotient arithmetic are checked; genuine actions and geometric family identification are inputs. |
 | `lem:r6-gcd1` | no direct declaration | Manuscript proof of exact-linear-gcd shallowness. |
@@ -65,6 +65,45 @@ proposition, theorem, or corollary labels in the TeX include graph.
 | `prop:r7-central` | no direct declaration | Manuscript central-lift and inverse-image proof, supported by Certificate R7. |
 | `cor:r7-contained` | no direct declaration | Manuscript rank--nullity and component proof; the R7 synthesis structure takes the result as an explicit input. |
 | `thm:r7` | `PRSRedundancySixSeven.redundancySevenAllFieldSynthesis`; `PRSRedundancySixSevenCertificate.redundancySeven_count_exhaustion` | Conditional synthesis and finite-row arithmetic. The `q=7,8,9` rows are not promoted through the missing radius premise. |
+
+| `thm:main` | 'PRSStableComponents.RecursiveContainedGeometryInput.bad_implies_persistent_or_modular'; 'PRSUniformCoveringRadius' arithmetic terminals | Manuscript aggregation. The recursive logical descent and threshold arithmetic are checked; the concrete reduced carrier and fixed-level arithmetic retain the routes listed below. |
+| `prop:reduced-terminal-carrier` | no direct declaration | Manuscript prime-decomposition proof plus the stable-component elimination certificates. Lean does not prove the concrete primary ideals or exceptional-fibre equations. |
+| `prop:maximal-lucas-union` | no direct declaration | Manuscript Lucas/Pascal proof. The degree-one pullback enters the formal recursive interface as an explicit geometric input. |
+| `prop:recursive-component-selection` | 'PRSSquarefreeMarkerDensity.eq_zero_of_splitCoefficientPullback_eval_eq_zero_on_injective'; 'PRSStableComponents.RecursiveContainedGeometryInput.bad_implies_persistent_or_modular' | Polynomial density, closure transport, finite-component selection, and recursive logical composition are kernel checked. The marker-to-rowspace identification and concrete component classification are manuscript inputs. |
+| `thm:recursive-carrier` | 'PRSStableComponents.RecursiveContainedGeometryInput.bad_implies_persistent_or_modular'; 'PRSUniformCoveringRadius.UniformIteratedPackageInput.packages_fit_uniform_threshold'; radius bridge terminals | Conditional synthesis and threshold arithmetic are checked. The reduced carrier theorem, persistent-family geometry, and cited coding implications remain manuscript or imported inputs. |
+| `prop:upper-radius` | radius bridge terminals | The manuscript applies the cited Seroussi--Roth and Dür theorems; Lean keeps those coding inputs explicit. |
+| `prop:r8-bottom` | no direct declaration | Manuscript point-count and ramification-degree proof; Certificate R8 checks the numerical data. |
+| `lem:r8-bottom-strata` | no direct declaration | Manuscript exhaustive bottom-stratum proof. |
+| `lem:r8-monodromy` | no direct declaration | Manuscript geometric-\(S_3\) integrality and deletion proof. |
+| `lem:r8-two-marker` | no direct declaration | Manuscript marker-avoidance proof. |
+| `lem:r8-outer-selection` | no direct declaration | Manuscript parameter-divisor proof. |
+| `prop:r8-lp61` | no direct declaration | Manuscript synthesis of the pointed lower package; its arithmetic is certificate checked. |
+| `prop:r8-modular` | 'PRSPolarInduction.mem_modularContractionKernel_iff' | The abstract kernel criterion is checked; the Lucas supports and split witnesses are manuscript mathematics with Certificate R8 replay. |
+| `prop:r8-contained` | no direct declaration | Manuscript contained-component and collision proof. |
+| `thm:r8` | companion 'PRSRedundancyEight' terminal, outside the 17-file R5--R7 aggregate | Conditional formal synthesis exists; the present paper relies on the printed proof and Certificate R8, not on an expanded aggregate claim. |
+| `prop:r9-budgets` | companion 'PRSRedundancyNine' terminal, outside the 17-file aggregate | Budget arithmetic has a conditional formal route; geometric packages are printed manuscript inputs. |
+| `prop:r9-residual` | 'PRSRedundancyNineResidual' algebra, outside the aggregate | Residual-quadratic Hankel and discriminant identities are kernel checked. |
+| `prop:r9-slice` | no direct declaration | Manuscript genus calculation. |
+| `prop:r9-components` | no direct declaration | Manuscript universal-slice and Bézout-cover proof; appendix data and replay check the six sections. |
+| `prop:r9-deletion` | no direct declaration | Manuscript divisor-degree proof. |
+| `prop:r9-char7` | external Certificate R9-49 | Exact finite carrier statement. No Lean claim of enumeration semantics is made. |
+| `prop:r9-orbits` | companion orbit-arithmetic terminals, outside the aggregate | Cyclic quotient arithmetic is checked conditionally; genuine actions remain manuscript input. |
+| `prop:r9-other-modular` | 'PRSPolarInduction.mem_modularContractionKernel_iff' | Abstract kernel criterion only; concrete supports and witnesses are manuscript proof. |
+| `prop:r9-contained` | no direct declaration | Manuscript contained-component proof. |
+| `thm:r9` | companion 'PRSRedundancyNine' synthesis terminal, outside the aggregate | Conditional formal synthesis exists; concrete geometry, radius, and certificate semantics remain external. |
+| `prop:lucas-kernel` | no direct declaration | Manuscript Lucas-overlap proof. |
+| `prop:linearized` | no direct declaration | Manuscript Kummer/additive monodromy proof; Wang--Wu--Hu Proposition 11 is cited only for the projective-subline endpoint criterion. |
+| `prop:e7-orbit` | companion Lucas-carrier algebra, outside the aggregate | The manuscript prints the action and kernel calculation. |
+| `prop:e7-as` | no direct declaration | Manuscript Artin--Schreier quotient proof. |
+| `prop:e7-additive` | no direct declaration | Manuscript affine-frame monodromy proof. |
+| `thm:e7` | companion endpoint terminal, outside the aggregate | Manuscript constructive proof and exact counting formula. |
+| `prop:m9-invariant-block` | no direct declaration | Manuscript proof through the rank-one constructions and all-field rank-two Artin--Schreier argument; exact certificates close the invariant block at \(q=16,32,64\). |
+| `prop:final-pair` | no direct declaration | Manuscript expansion and Cramer's-rule proof. |
+| `thm:m9-shallow` | public Lucas M9 quotient certificates plus manuscript all-field proof | The finite certificates check the full carrier at \(q=16,32\) and only the invariant block at \(q=64\); the genus-one argument proves the complement for \(q\ge64\). Lean makes no carrier-exhaustion claim. |
+| `prop:r10-pointed-budgets` | no direct declaration | Manuscript degree calculation for all five retained-marker stages; the abstract finite-depth synthesis remains conditional in Lean. |
+| `prop:r10-escape` | 'PRSStableComponents' conditional interface | The fixed-depth package discharge and concrete R10 budgets are manuscript mathematics with Certificate R10 arithmetic replay. |
+| `prop:r10-char7-lift` | 'PRSPolarInduction.mem_modularContractionKernel_iff' | Contraction algebra is kernel checked; the R9 finite-root witness and marker-avoidance argument are printed mathematics. |
+| `cor:r10` | 'PRSStableComponents' and 'PRSUniformCoveringRadius' conditional interfaces | Derived manuscript corollary. The first-carrier arithmetic is supplied by 'thm:m9-shallow', not by Lean. |
 
 ## Exact project-owned closure
 
@@ -113,24 +152,13 @@ The release-level evidence manifest records the same bytes and hash.
 From the repository root, the supported aggregate gate is:
 
 ```text
-lean/scripts/lean-build-queue.py run \
+(cd lean && nix develop --command lake build \
   RelativeConicArcs.Gates.PRSBeyondRedundancyFourAxiomAudit \
-  --profile single --threads 1 --cores 20-23 \
-  --aggregate RelativeConicArcs.Gates.PRSBeyondRedundancyFour
+  RelativeConicArcs.Gates.PRSBeyondRedundancyFour)
 ```
 
-The queue records per-target source/toolchain traces, build telemetry,
-exact-target currentness, and the final trace-only aggregate gate. The
-paper-local verifier independently checks that this table has exactly the
-current TeX label set and that the aggregate and audit source have exactly the
-declared R5--R7 target sets.
-
-The balanced quantum bridge is checked separately by:
-
-```text
-lean/scripts/lean-build-queue.py run \
-  RelativeConicArcs.PRSBalancedQuantumExtension \
-  RelativeConicArcs.Gates.PRSBalancedQuantumExtension \
-  RelativeConicArcs.Gates.PRSBalancedQuantumExtensionAxiomAudit \
-  --profile single --threads 1 --cores 20-23
-```
+The paper-local verifier independently checks that the statement table has
+exactly the current TeX label set and that the aggregate and audit source
+have exactly the declared target sets.  The balanced quantum bridge has its
+own formal gate in the development repository; it is not part of this
+17-source-file paper export and no replay command for it is advertised here.

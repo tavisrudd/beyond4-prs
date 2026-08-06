@@ -13,13 +13,13 @@
       "source_blob": null
     },
     {
-      "bytes": 1660,
+      "bytes": 1938,
       "mode": "100644",
       "path": ".zenodo.json",
       "rewrites": [],
       "role": "verification",
-      "sha256": "c5c33a76b6026d0f4668b6d2d787c8acce5e08a25adcce0d9c343e6224b78c15",
-      "source_blob": "11bcf836b78d44805326d40578306a1a49650232"
+      "sha256": "111ced8e0b4a0b21158e15d422358b7badcfbb51249d94890ca6a2a85660d6e6",
+      "source_blob": "70316d7ad4d70b3d3325b9a644dfae0a0a2a2fff"
     },
     {
       "bytes": 470,
@@ -44,7 +44,7 @@
       "mode": "100644",
       "path": "PROVENANCE.md",
       "role": "provenance",
-      "sha256": "6d487cff1db185e868e1e95ab690e054fa03cb8dfd576b57cd746f5326a5bb7c",
+      "sha256": "4fbdfebefdf768efdd056e439cb1c5316eb734822f079aeed5ed52daedb17c66",
       "source_blob": null
     },
     {
@@ -111,13 +111,13 @@
       "source_blob": "6b8263ea9089b9113c1a2af473943ffee5b13a57"
     },
     {
-      "bytes": 205,
+      "bytes": 297,
       "mode": "100644",
       "path": "frontmatter/index-terms.tex",
       "rewrites": [],
       "role": "manuscript-source",
-      "sha256": "a494b4e1555ec3f1a812c90b64991a421848935fc556a84728dd2b3f4cf1028d",
-      "source_blob": "d95b644b4323e5ca60f935d2d942183b3580a2a2"
+      "sha256": "9ee310e01c61aa76cf3f13967076905445cfa929b6a3a26dd86bade59995b598",
+      "source_blob": "02923377e2cf0a8dad4bfb647272448943105b0c"
     },
     {
       "bytes": 2615,
@@ -156,31 +156,31 @@
       "source_blob": "69cd3821333c62d6808157dcce5e8fe7692fa78e"
     },
     {
-      "bytes": 554391,
+      "bytes": 553369,
       "mode": "100644",
       "path": "prs-beyond-redundancy-four-tit-submission.pdf",
       "rewrites": [],
       "role": "release-output",
-      "sha256": "eb2b7f57d6cb99f87f1b83d30170d2aabfa417757c0b0b45ed35366c0ce5c09c",
-      "source_blob": "e9b5c829efc9624eee5cc108cfcc9edd905b8511"
+      "sha256": "b6ee167cca10bf0812f59eb60e6d3e8e01e56a3044b7767fa53f3804c251249a",
+      "source_blob": "5027c07d6d427bed0f42b2f77e2ed467aeba3f5d"
     },
     {
-      "bytes": 381997,
+      "bytes": 381649,
       "mode": "100644",
       "path": "prs-beyond-redundancy-four.pdf",
       "rewrites": [],
       "role": "release-output",
-      "sha256": "526888d498f4503ac24a366610c27d4fc513ec2409003c9771a5f780d68173d6",
-      "source_blob": "f6c365cdd4ab977d1edcd96d3a68d767275c30d2"
+      "sha256": "a9343fd35e75e4aec352b387b3b3d622a8e07297b3b73074111026effa4328a8",
+      "source_blob": "6eae52dd2884e9b3ac0ac188b8d5a769e9d52447"
     },
     {
-      "bytes": 8676,
+      "bytes": 8726,
       "mode": "100644",
       "path": "refs.bib",
       "rewrites": [],
       "role": "manuscript-source",
-      "sha256": "c12f17883f3e3717204440823ffa12fa5d815684abc1161d4d8952d88fe24649",
-      "source_blob": "4d9a43ebab80077d28d933e9bbfcf0b72e82ccb8"
+      "sha256": "09fb42b2039dd2c62266dbeb389c5b99beebdb87c4929ac7ee171a62f05a667a",
+      "source_blob": "ea11fac0b1ba853e273741a790d819a36bd500ca"
     },
     {
       "bytes": 10994,
@@ -413,8 +413,8 @@
       "path": "supplement/RELEASE-MANIFEST.md",
       "rewrites": [],
       "role": "support",
-      "sha256": "99ca87fb11447b9468b3efc63a8f25f0ffdb8fd87843ebe77fc456a4bd409dd3",
-      "source_blob": "29bfc6f343464cb27b392a18be84ace74e27e7b1"
+      "sha256": "751fb98ccfaa7d23d16540c04824887565323115bc7431a46ae1b5026ae191c8",
+      "source_blob": "89f6d53f1fa7a58574a32ff0f2491b30b9dc85f4"
     },
     {
       "bytes": 9092,
@@ -1003,10 +1003,10 @@
     "beyond4_prs",
     "beyond4_prs_submission"
   ],
-  "paper_registry_sha256": "5f4582b32c009ec3446aa55f3f34974dd7d2e33ac56c44a346ebf6971cdd4f8c",
+  "paper_registry_sha256": "603ca0770496b2e4fcbdb4cf5db5126a70f5ed52d5f7e1789d70e3fb83c0f21d",
   "release_output_policy": "legacy-unspecified",
   "repository": "beyond4-prs",
-  "repository_map_sha256": "1bdb09c56a03b75d686d0267263cefe6b18befe52a3bbbc522bbc9b68b74c8ba",
+  "repository_map_sha256": "59230e8d90cbd3a647c7577061816d50d5f3d2fa9ffa1a21e9d6da3c5251fba9",
   "schema_version": 1,
-  "source_commit": "deebf928d75ee53e4dd21c6b2779c077b9d7c42c"
+  "source_commit": "5213f1d30c841ca4e1b00a23c30bf5c0ee1055e1"
 }

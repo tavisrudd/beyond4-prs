@@ -13,13 +13,13 @@
       "source_blob": null
     },
     {
-      "bytes": 1938,
+      "bytes": 1916,
       "mode": "100644",
       "path": ".zenodo.json",
       "rewrites": [],
       "role": "verification",
-      "sha256": "111ced8e0b4a0b21158e15d422358b7badcfbb51249d94890ca6a2a85660d6e6",
-      "source_blob": "70316d7ad4d70b3d3325b9a644dfae0a0a2a2fff"
+      "sha256": "33a945ccdbaa2b1e9733db581a3300418564fa5630488e23a1fc4353b49be242",
+      "source_blob": "2d9f5f33f1b536971a0c5a56c7f71a3c4ce16c4a"
     },
     {
       "bytes": 470,
@@ -44,7 +44,7 @@
       "mode": "100644",
       "path": "PROVENANCE.md",
       "role": "provenance",
-      "sha256": "4fbdfebefdf768efdd056e439cb1c5316eb734822f079aeed5ed52daedb17c66",
+      "sha256": "91ee3c2fedf5d3229b0e12f73c78c2802ba9c0966de008c7b0738e0e880a5e82",
       "source_blob": null
     },
     {
@@ -111,13 +111,13 @@
       "source_blob": "6b8263ea9089b9113c1a2af473943ffee5b13a57"
     },
     {
-      "bytes": 297,
+      "bytes": 196,
       "mode": "100644",
       "path": "frontmatter/index-terms.tex",
       "rewrites": [],
       "role": "manuscript-source",
-      "sha256": "9ee310e01c61aa76cf3f13967076905445cfa929b6a3a26dd86bade59995b598",
-      "source_blob": "02923377e2cf0a8dad4bfb647272448943105b0c"
+      "sha256": "6c5e7446fd7ec799a5939e0674510153dd35d645199bda535f40a8c21a252b7f",
+      "source_blob": "b8f2c67d1034b28df4facbf4da347feed75c2e6f"
     },
     {
       "bytes": 2615,
@@ -156,22 +156,22 @@
       "source_blob": "69cd3821333c62d6808157dcce5e8fe7692fa78e"
     },
     {
-      "bytes": 553369,
+      "bytes": 553287,
       "mode": "100644",
       "path": "prs-beyond-redundancy-four-tit-submission.pdf",
       "rewrites": [],
       "role": "release-output",
-      "sha256": "b6ee167cca10bf0812f59eb60e6d3e8e01e56a3044b7767fa53f3804c251249a",
-      "source_blob": "5027c07d6d427bed0f42b2f77e2ed467aeba3f5d"
+      "sha256": "25bd2b5255bba6142f8cfeab0e445e1d4fe77a5fc1d37f28d6221c463a9bdf4a",
+      "source_blob": "b4f015db28cf59b277d40f75c84c3b3759c57795"
     },
     {
-      "bytes": 381649,
+      "bytes": 381557,
       "mode": "100644",
       "path": "prs-beyond-redundancy-four.pdf",
       "rewrites": [],
       "role": "release-output",
-      "sha256": "a9343fd35e75e4aec352b387b3b3d622a8e07297b3b73074111026effa4328a8",
-      "source_blob": "6eae52dd2884e9b3ac0ac188b8d5a769e9d52447"
+      "sha256": "1a0b6d35df6a23e875efea00a88ce3287567db23d41aae9e1451999ea6846387",
+      "source_blob": "cf189cd1f35612bdbba9d9325470252ec448075f"
     },
     {
       "bytes": 8726,
@@ -1008,5 +1008,5 @@
   "repository": "beyond4-prs",
   "repository_map_sha256": "59230e8d90cbd3a647c7577061816d50d5f3d2fa9ffa1a21e9d6da3c5251fba9",
   "schema_version": 1,
-  "source_commit": "5213f1d30c841ca4e1b00a23c30bf5c0ee1055e1"
+  "source_commit": "58729c97aa3f22c297abee63749dc3da0501c279"
 }

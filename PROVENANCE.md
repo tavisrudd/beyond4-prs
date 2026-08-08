@@ -1,6 +1,6 @@
 # Export provenance
 
-- Source snapshot commit: `f55ac2c024c1f2cb231738fec6089d444601910a`
+- Source snapshot commit: `96746f704348442e800307ed0ff23b448d169ad4`
 - Repository identity: `tavisrudd/beyond4-prs`
 - Export method: deterministic, content-addressed source materialization.
 - File hashes and source blob identities are recorded in `export-manifest.json`.

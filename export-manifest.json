@@ -44,17 +44,17 @@
       "mode": "100644",
       "path": "PROVENANCE.md",
       "role": "provenance",
-      "sha256": "b903ee7e3d3fb89958e6d715dafb1ca7113a5e52507efefaa36acb757b4e160e",
+      "sha256": "952f8eafe04f47d1b4e2addc7869b3c40b43d93ad5f9470fb5bf16c596bdac06",
       "source_blob": null
     },
     {
-      "bytes": 3627,
+      "bytes": 4067,
       "mode": "100644",
       "path": "README.md",
       "rewrites": [],
       "role": "support",
-      "sha256": "43fd1f1a9f054bcb2b068082a86969313573a4f7783272e2ff62d05b7117dc62",
-      "source_blob": "6ac19a8302b91963f2ffa9a945b1a1318c747e9c"
+      "sha256": "a012930ed40fc6a66e41f754abe8d86c627f8b3fac8af14c32460ee916f9b415",
+      "source_blob": "e271435e4e23ae0bd4abf6adc8a62b2607c2007c"
     },
     {
       "bytes": 3140,
@@ -1030,10 +1030,10 @@
     "beyond4_prs",
     "beyond4_prs_submission"
   ],
-  "paper_registry_sha256": "603ca0770496b2e4fcbdb4cf5db5126a70f5ed52d5f7e1789d70e3fb83c0f21d",
+  "paper_registry_sha256": "425708671b56fda38b8dba3daaf10945ad37c8647dabf4dd5041d7b37205497d",
   "release_output_policy": "legacy-unspecified",
   "repository": "beyond4-prs",
   "repository_map_sha256": "59230e8d90cbd3a647c7577061816d50d5f3d2fa9ffa1a21e9d6da3c5251fba9",
   "schema_version": 1,
-  "source_commit": "f55ac2c024c1f2cb231738fec6089d444601910a"
+  "source_commit": "96746f704348442e800307ed0ff23b448d169ad4"
 }

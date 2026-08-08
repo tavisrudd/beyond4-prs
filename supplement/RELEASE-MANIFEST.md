@@ -1,6 +1,12 @@
 # Release manifest
 
-Status: **Version 1 published; Version 2 is the current local draft**
+Status: **Version 1 published; Version 2 is the current local draft and will supersede it**
+
+Version 2 corrects a defect in Version 1: the inference from a split-free syndrome
+direction to a one-column MDS extension, and the balanced quantum corollary at field
+order eight that rested on it, are withdrawn.  The Version 2 release note must state
+that correction before its new material.  Version 1's tag, commit, and Zenodo record
+below remain immutable.
 
 Version 1 was published on 2026-07-29 in the public GitHub repository and
 archived by Zenodo.  Its immutable record is:
@@ -42,8 +48,8 @@ undo the completed Version 1 publication record.
 | Source archive SHA-256 | computed from the immutable export archive |
 | Source archive bytes | computed from the immutable export archive |
 | PDF artifact | `prs-beyond-redundancy-four.pdf` |
-| Local built PDF SHA-256 | `67a0c251f70c3a140eeede11c63a0cc16a9f03b21d8b6ffde4867585ce245d48` |
-| Local built PDF bytes | `381596` |
+| Local built PDF SHA-256 | `8b2695e9ac89acf369a3a994018dd4e913e7b04486d932c9e498e3f5dd0f59ad` |
+| Local built PDF bytes | `414423` |
 | PDF SHA-256 | computed from the immutable export build |
 | PDF bytes | computed from the immutable export build |
 | Toolchain lock | `supplement/toolchain/`; five pinned files with hashes below |
@@ -58,10 +64,10 @@ record SHA-256 plus exact byte count.
 
 | Manifest object | SHA-256 | Bytes |
 |---|---|---:|
-| `EVIDENCE-MANIFEST.json` | `389db2b5ff524c5ec3c2b9412b1c66771152928d4111f94c9dd50bd8ed876115` | 20506 |
-| `EVIDENCE-ROWS.md` | `40aa4fbe542f7e45281a503d579fb7a33353009a5476d6e25cba8a82b0bbd691` | 13579 |
-| `package_evidence_bundle.py` | `54559e6e94e59d1b3152c410151f14c3039fad307a5f318b39aa2d17d34db03a` | 14585 |
-| `verify.py` | `fe9fdb9e1feafaad11667b7040e4e1bfdf2b81068495cc542357c83bf0a62dde` | 16488 |
+| `EVIDENCE-MANIFEST.json` | `b098fba6d76da99bfd61782f6c8d3fcd5dc4397535ef5288b7e77e50349d5992` | 21513 |
+| `EVIDENCE-ROWS.md` | `80cca74cff93e7145267725f512b3e1dc08ed68357114fb1c7dbae1885d2890c` | 14280 |
+| `package_evidence_bundle.py` | `6d231b8b1d6c7384c482c6c408433400ae2f23305cf61514de17277e35574f79` | 15090 |
+| `verify.py` | `12d4161b5401a34d24fb535efe8ec5dd72a464269d0621175c2b95778afe0d5f` | 16721 |
 | `build_r6_paper_table.py` | `b46a30752ea17d85093e6181d50ca8dbd6f12386416aedc3e8509406a2060f98` | 3878 |
 
 Verify the complete local bundle from the paper directory:

@@ -9,6 +9,28 @@ $W_f$ are ordinary symmetric-power coordinates.  Factoring the formal
 quartic $\sum a_iT^iU^{4-i}$ would therefore be noninvariant in
 characteristics two and three.
 
+\paragraph{The criterion in finite-geometric form.}
+At $r=5$ the witness system $W_f\subset\Sym^3E^\vee$ is a pencil of
+binary cubics, that is a line of $\mathrm{PG}(3,q)$ relative to the twisted
+cubic; and a completely split squarefree cubic is a point of the
+$\PGL_2(q)$-orbit $\mathcal O_3=\PGL_2(q)\cdot XY(X-Y)$ of size
+$(q^3-q)/6$, equivalently a plane meeting the twisted cubic in three
+distinct rational points \cite[Prop.~3.1 and Rem.~3.2]{BPS2022},
+\cite[Lem.~4.1]{KaipaPradhan2025}.  Corollary~\ref{cor:splitfree}
+therefore reads
+\begin{equation}\label{eq:r5-orbit-criterion}
+       f\ \text{split-free}
+       \iff
+       W_f\cap\mathcal O_3=\varnothing .
+\end{equation}
+In this form the redundancy-five question is a point-orbit
+distribution question for line orbits of $\mathrm{PG}(3,q)$, and as such it has
+been answered in the finite-geometry literature; the relation is set
+out in Remark~\ref{rem:r5-line-literature}.  What that literature does
+not supply, and what this section adds, is the passage from a
+redundancy-five syndrome to its pencil: which lines arise as some
+$W_f$, and which \emph{syndromes} are thereby split-free.
+
 \begin{proposition}[Radius gate]\label{prop:r5-radius}
 For every prime power $q\geq7$,
 \[
@@ -197,9 +219,179 @@ $t\mapsto\pm t+\beta$, of order $2q$, and orbit--stabilizer gives
 $(q^2-1)/2$.
 \end{proof}
 
+The count of split members of the pencil is not merely positive or
+zero: it is determined exactly by the fibre square, and the following
+identity is what drives both the threshold and the shape of the
+exceptions.
+
+\begin{proposition}[Exact split-witness count]\label{prop:r5-count}
+Let $\deg\gcd(W_f)=0$ and let $\phi_f$ be separable; the characteristic
+is arbitrary.
+Write
+\begin{itemize}
+\item $N_f$ for the number of completely split squarefree members of
+      $W_f$,
+\item $d_2$ for the number of members with a rational double root and a
+      distinct rational simple root,
+\item $d_3$ for the number of members that are perfect cubes of a
+      rational linear form.
+\end{itemize}
+Then
+\begin{equation}\label{eq:r5-count}
+       \#Y_f(\F_q)=6N_f+3d_2+d_3 .
+\end{equation}
+In particular $f$ is split-free if and only if
+$\#Y_f(\F_q)=3d_2+d_3$.
+\end{proposition}
+
+\begin{proof}
+Each $x\in\PP^1(\F_q)$ lies on exactly one member $g_x$ of the pencil,
+because the pencil is basepoint-free; write $g_x=\ell_xh_x$ with
+$\ell_x$ the linear form at $x$.  The fibre of $Y_f$ over $x$ under the
+first projection is the set of rational roots of $h_x$, so
+$\#Y_f(\F_q)=\sum_x\#\{\text{rational roots of }h_x\}$, and it suffices
+to total that sum member by member.  A member with three distinct
+rational roots is met at each of them, and there $h_x$ has the two
+remaining roots, contributing $3\cdot2=6$.  A member with a rational
+double root $r$ and distinct rational simple root $s$ is met at both:
+over $r$ the residual is $\ell_r\ell_s$ with two distinct rational
+roots, over $s$ it is $\ell_r^2$ with one, contributing $2+1=3$.  A
+perfect cube is met only at its root, where the residual is a square,
+contributing $1$.  A member with one rational root and an irreducible
+quadratic cofactor contributes $0$ there, and a member with no rational
+root is met at no rational $x$.  Summing gives \eqref{eq:r5-count}.
+\end{proof}
+
+The proof exhibits the fibre square as a double cover, and that is what
+identifies it with the genus-one curve of the incidence literature.
+
+\begin{proposition}[The fibre square is the incidence curve]
+\label{prop:r5-fibre-is-elliptic}
+Keep the hypotheses of Proposition~\ref{prop:r5-count}, assume
+$\operatorname{char}\F_q\neq2$, and let
+$D_f(x)=\operatorname{disc}(h_x)/4$.  The restriction is needed here and
+not in Proposition~\ref{prop:r5-count}: in characteristic two the
+quotient by four is undefined, and a separable quadratic cover is
+Artin--Schreier rather than the Kummer cover displayed below.  The first projection realizes
+$Y_f$ as the double cover
+\[
+       w^2=D_f(x)
+\]
+of $\PP^1$, branched where $D_f$ vanishes.  If moreover $W_f$ misses the
+twisted cubic and $\operatorname{char}\F_q\neq2,3$, then $D_f$ is the
+discriminant quartic that Kaipa and Pradhan attach to the line, so the
+normalization of $Y_f$ is their elliptic curve $E_{W_f}$ and
+\[
+       \#Y_f(\F_q)=\#E_{W_f}(\F_q).
+\]
+\end{proposition}
+
+\begin{proof}
+The fibre of $Y_f$ over $x$ under the first projection is the root set
+of the residual quadratic $h_x$, and its two roots are interchanged by
+the choice of a square root of $\operatorname{disc}(h_x)$; so the
+projection is the stated double cover, and it is branched exactly where
+that discriminant vanishes.  Kaipa and Pradhan form the discriminant of
+the same residual quadratic and define $E_L$ as the non-singular model
+of $w^2=D_L$ \cite[\S4--\S5]{KaipaPradhan2025}, taking as we do one quarter
+of the discriminant of the same residual quadratic.  They therefore differ by
+the square of the nonzero rational function $\lambda\in\F_q(x)^\times$
+that relates the two normalizations of the residual quadratic,
+\[
+       D_f=\lambda^2D_L\quad\text{in }\F_q(x)^\times,
+\]
+with equality when the representative of $g_x$ is normalized as they
+normalize it.  Equality of square classes in the function field, rather
+than pointwise at rational $x$, is what rules out a quadratic twist and
+leaves the cover unchanged.  For the point counts,
+note that on that stratum $D_f$ has nonzero discriminant, so the double
+cover displayed above is already smooth and is its own normalization,
+and $Y_f$ is smooth there as well; the two smooth projective models are
+then isomorphic and their counts agree.  Away from that stratum the
+identification is birational and the counts may differ at a rational
+singularity, which is why the exact count of
+Proposition~\ref{prop:r5-count} is stated for $\#Y_f(\F_q)$ rather than
+for the count on a normalization.
+\end{proof}
+
+\begin{lemma}[Branch budget]\label{lem:r5-branch}
+Under the hypotheses of Proposition~\ref{prop:r5-count},
+\[
+       d_2+2d_3\leq4,
+\]
+so a split-free $f$ has $\#Y_f(\F_q)\leq12$, with equality only when
+$d_2=4$ and $d_3=0$.
+\end{lemma}
+
+\begin{proof}
+Riemann--Hurwitz gives different degree four for the separable
+degree-three map $\phi_f$.  A member with a double root has one
+ramification point of index two; it spends different degree one when
+that ramification is tame and at least two when it is wild, which
+happens exactly in characteristic two.  We avoid the term \emph{simple
+ramification}, which is usually taken to include the tame exponent.  A member that is a perfect cube is totally
+ramified; it spends two when tame and at least three when wild, which
+happens exactly in characteristic three.  Distinct members are distinct
+branch values, so $d_2+2d_3\leq4$ in every characteristic, and
+characteristic two gives the sharper $d_2+d_3\leq2$.  Substituting into
+\(\#Y_f(\F_q)=3d_2+d_3\) and maximizing over the integer points of
+that region gives $12$, attained only at $(d_2,d_3)=(4,0)$.
+\end{proof}
+
+\begin{corollary}[Split members of an $S_3$ pencil]\label{cor:r5-equidistribution}
+If $\phi_f$ has geometric monodromy $S_3$, then
+\[
+ \frac{q+1-2\sqrt q-B}{6}\;\leq\;N_f\;\leq\;\frac{q+1+2\sqrt q}{6},
+\]
+where $B=12$, and $B=6$ when $\operatorname{char}\F_q=2$.
+\end{corollary}
+
+\begin{proof}
+Proposition~\ref{prop:r5-count} gives $6N_f=\#Y_f(\F_q)-3d_2-d_3$, and
+Lemma~\ref{lem:r5-branch} bounds $3d_2+d_3$ above by $12$ in general and
+by $6$ in characteristic two, where $d_2+d_3\leq2$; it is bounded below
+by $0$ in every characteristic.  The $S_3$ hypothesis makes $Y_f$
+geometrically integral of arithmetic genus one, so Aubry--Perret
+confines $\#Y_f(\F_q)$ to $q+1\pm2\sqrt q$
+\cite[p.~468]{AubryPerret1995}.
+\end{proof}
+
+\begin{corollary}[Binary fields need no certificate above $q=8$]
+\label{cor:r5-binary-shallow}
+If $\operatorname{char}\F_q=2$ and $\phi_f$ has geometric monodromy
+$S_3$, then $f$ is shallow for every $q\geq16$.
+\end{corollary}
+
+\begin{proof}
+A split-free $f$ has $\#Y_f(\F_q)=3d_2+d_3\leq6$ by
+Lemma~\ref{lem:r5-branch}, while Aubry--Perret gives
+$\#Y_f(\F_q)\geq q+1-2\sqrt q$.  For $q=16$ the latter is $9$, and it
+increases with $q$, so no binary field with $q\geq16$ admits a split-free
+$S_3$ pencil.
+\end{proof}
+
+The main term $(q+1)/6$ is the expected $S_3$ splitting density.  A
+completely split fibre is one whose Frobenius class is the identity, and
+that class has density $1/|S_3|=1/6$ on the unramified locus, by the
+factorization-type correspondence of \cite[Thm.~3.6]{Wang2026} together
+with the Chebotarev count and density of
+\cite[Thm.~3.7 and Cor.~3.8]{Wang2026}, whose geometric Galois group is
+$S_3$ under the present hypothesis; so
+$(q+1)/6$ is a Chebotarev main term rather than a count of fibres.
+Corollary~\ref{cor:r5-equidistribution} makes it quantitative: split
+members occur with that expected density up to a Weil-scale error and a
+bounded ramification correction.  Split-freeness is the extreme
+small-field case in which the lower bound has turned nonpositive, which
+is why the exceptional fields are small ones.  Lemma~\ref{lem:s3}
+records only the sign of this statement.  We claim the density only for
+the completely split class; the other factorization types are not
+counted here.
+
 \begin{lemma}[$S_3$ stratum]\label{lem:s3}
-If $\phi_f$ has geometric monodromy $S_3$ and $q\geq23$, then the pencil
-contains a completely split squarefree cubic.
+If $\phi_f$ has geometric monodromy $S_3$ and $q\geq20$, then the pencil
+contains a completely split squarefree cubic.  For odd $q$ the same
+conclusion holds for every $q\geq20$ without the monodromy hypothesis
+whenever $Y_f$ is geometrically integral.
 \end{lemma}
 
 \begin{proof}
@@ -215,33 +407,72 @@ genus \(\pi_C\), gives
 \[
        \#Y_f(\F_q)\geq q+1-2\sqrt q
 \]
-\cite[p.~468]{AubryPerret1995}.  An integral curve of arithmetic genus
-one has at most one geometric singular point: if it is singular, its
-normalization has genus zero and the total delta invariant is one.
-We therefore delete at most one rational singular point.
-The diagonal costs
-\[
-       Y_f\cdot\Delta=(2,2)\cdot(1,1)=4.
-\]
-Riemann--Hurwitz gives different degree four for the separable cubic
-map, hence at most four branch values.  A singular cubic has at most
-two distinct roots and at most two ordered off-diagonal pairs, so the
-branch deletion costs at most eight.  If
-$q+1-2\sqrt q>13$, a smooth rational point remains outside the
-diagonal and branch fibers.  It gives two distinct rational roots of
-a squarefree cubic, whose third root is rational.  This inequality is
-equivalent to \(q-2\sqrt q>12\) and holds for every prime power
-$q\geq23$.
+\cite[p.~468]{AubryPerret1995}.  Suppose $f$ were split-free.  Then
+$\#Y_f(\F_q)\leq12$ by Lemma~\ref{lem:r5-branch}, so
+$q+1-2\sqrt q\leq12$, that is $(\sqrt q-1)^2\leq12$ and
+$q\leq(1+2\sqrt3)^2<20$.
 \end{proof}
+
+\begin{corollary}[Forced fibre-square invariants]\label{cor:r5-forced}
+Let $q$ be odd with $17\leq q\leq19$ and let $f$ be split-free with
+$Y_f$ geometrically integral.  Then
+\[
+ \#Y_f(\F_q)=12,\qquad d_2=4,\qquad d_3=0 .
+\]
+\end{corollary}
+
+\begin{proof}
+Lemma~\ref{lem:r5-branch} restricts $\#Y_f(\F_q)=3d_2+d_3$ to the
+values $0,1,2,3,4,6,7,9,12$.  Aubry--Perret forces
+$\#Y_f(\F_q)\geq q+1-2\sqrt q$, which exceeds $9$ for $q\geq17$; the
+only admissible value left is $12$, and by Lemma~\ref{lem:r5-branch}
+that value is attained only at $(d_2,d_3)=(4,0)$.
+\end{proof}
+
+Proposition~\ref{prop:r5-count} is a counting identity valid in every
+characteristic, and the quantitative splitting law of
+Corollary~\ref{cor:r5-equidistribution} follows from it directly.  In
+the tame range it is equivalent to an incidence count in the
+twisted-cubic line literature.  Precisely: when $W_f$ misses the twisted
+cubic, so that $d_3=0$, and $\operatorname{char}\F_q\neq2,3$, the
+quantity $d_2$ is the invariant $\eta_L$ attached to the binary quartic
+of the line and $\#Y_f(\F_q)$ is the point count of the associated
+elliptic curve, so that \eqref{eq:r5-count} reads
+\[
+       N_f=\frac{\#E_L(\F_q)-3\eta_L}{6},
+\]
+which is the incidence count of \cite{KaipaPradhan2025}.  That count
+should be taken in the form derived in their proof, namely
+$|S\cap\mathcal O_3|=(\nu_L-\eta_L)/3$ together with
+$\nu_L=(\#E_L(\F_q)-\eta_L)/2$
+\cite[Prop.~4.5(3) and Thm.~5.1]{KaipaPradhan2025}; the denominator
+printed in the displayed statement of their Theorem~1.3(3) is $3$, which
+is a typographical slip, since $6$ is what their proof gives and what
+makes their five incidence counts sum to $q+1$.  The statement above drops
+the restriction $\operatorname{char}\F_q\neq2,3$ altogether, brings in
+lines meeting the curve through the $d_3$ term, and needs no invariant
+theory of quartics: its proof counts rational roots in fibres and uses
+neither a discriminant nor a division by two.  What does stay inside
+$\operatorname{char}\F_q\neq2,3$ is the comparison itself, through
+Proposition~\ref{prop:r5-fibre-is-elliptic}, since the elliptic model is
+built from a discriminant.  An
+exhaustive check of \eqref{eq:r5-count} and of
+Lemma~\ref{lem:r5-branch} over every point of $\mathrm{PG}(4,q)$ for the
+prime powers $4\leq q\leq32$, in every characteristic, is recorded in the
+supplement.
 
 \begin{proposition}[Exhaustion and finite bridge]\label{prop:r5-bridge}
 The preceding cases exhaust every redundancy-five pencil for
-$q\geq23$.  Certificate R5 closes exactly
+$q\geq20$, and in characteristic two for $q\geq16$ by
+Corollary~\ref{cor:r5-binary-shallow}.  The finite residue is therefore
 \[
-       q\in\{7,8,9,11,13,16,17,19\}.
+       q\in\{7,8,9,11,13,17,19\},
 \]
-It finds sporadic $S_3$-stratum orbits exactly at
-$q=7,8,9,11,13,17,19$ and none at $q=16$.
+which Certificate R5 closes.  The certificate additionally covers
+$q=16$, where it finds no sporadic orbit; that field is no longer
+logically certificate-dependent, and the computation is retained as an
+independent regression check.  Sporadic $S_3$-stratum orbits occur
+exactly at $q=7,8,9,11,13,17,19$.
 \end{proposition}
 
 \begin{proof}
@@ -255,6 +486,114 @@ settled by Lemmas~\ref{lem:cyclic} and \ref{lem:s3}.  The stated finite
 residue, canonical representatives, stabilizers, histograms, and
 Frobenius links are exactly the domain of Certificate R5.
 \end{proof}
+
+\begin{remark}[Relation to the twisted-cubic line literature]
+\label{rem:r5-line-literature}
+Two conventions for ``the line of $\mathrm{PG}(3,q)$ attached to a pencil
+of binary cubics'' are in use, and they are exchanged by a polarity, so
+the class names below must be read in the right one.  G\"unay and
+Lavrauw, and Blokhuis, Pellikaan, and Sz\H onyi, send a cubic to a
+\emph{plane}: the twisted cubic is a curve of points, a cubic is the
+plane meeting it in that cubic's divisor, and a pencil of cubics becomes
+a pencil of planes, whose axis is the line
+\cite[\S2]{GunayLavrauw2022}, \cite[Prop.~5.5]{BPS2022}.  Kaipa and
+Pradhan send a cubic to a \emph{point}, so that the twisted cubic
+consists of the perfect cubes and the pencil \emph{is} the line
+\cite[\S1]{KaipaPradhan2025}.  The bridge is the symplectic polarity
+$\sigma$ of $\mathrm{PG}(3,q)$, which carries each point of the twisted
+cubic to its osculating plane and carries the chords of the twisted
+cubic to the axes of the osculating developable
+\cite[\S2]{GunayLavrauw2022}.
+
+For us the translation is concrete.  The osculating plane at the point
+$\lambda^3$ of the twisted cubic is $\lambda\Sym^2E^\vee$, so
+\[
+ \operatorname{Osc}(\lambda_1)\cap\operatorname{Osc}(\lambda_2)
+       =\lambda_1\lambda_2\langle T,U\rangle
+\]
+is exactly a quadratic-gcd pencil, which is therefore an axis in the
+point convention; by \cite[Lem.~2]{GunayLavrauw2022} its polar is the
+chord joining $\lambda_1^3$ and $\lambda_2^3$, which is what the plane
+convention calls it.  Symmetrically $\langle T^3,U^3\rangle$ joins two
+points of the twisted cubic and so is a chord in the point convention
+and an axis in the plane convention.  The class names in this remark
+follow the plane convention of the source being cited; the split members
+of a pencil are of course the same either way.
+
+Under \eqref{eq:r5-orbit-criterion} every stratum above is a class of
+lines of $\mathrm{PG}(3,q)$ in the sense of Blokhuis, Pellikaan, and
+Sz\H onyi, who partition the lines into classes $O_1,\ldots,O_8$ and
+determine for $q\geq23$, in every characteristic, which classes lie in
+a plane meeting the twisted cubic in three rational points
+\cite[Thm.~7.1 and Prop.~7.4]{BPS2022}.  The correspondence is exact.
+Our quadratic-gcd trichotomy of Proposition~\ref{prop:r5-gcd2} is their
+degree-one case: real chords $O_1$ are shallow, tangents $O_2$ give the
+tangent family, imaginary chords $O_3$ give the conjugate-secant
+family.  The linear-gcd unisecants of
+Proposition~\ref{prop:r5-gcd1} are their $O_4$ and $O_5$.  The two
+cyclic cases of Lemma~\ref{lem:cyclic}(i) are their real axes $O_1'$
+and imaginary axes $O_3'$, with the same congruences mod three; the
+characteristic-three nucleus of Lemma~\ref{lem:cyclic}(ii) is their
+axis $O_7(3)$; the wild pencils of Lemma~\ref{lem:cyclic}(iii) are
+their $O_{8.1}(3)^{\pm}$ and $O_{8.2}(3)$.  Lemma~\ref{lem:s3} is their
+$O_6$, and their Remark 6.12 reaches the threshold $q\geq23$ by the
+same route: the double point scheme of the degree-three map is a
+genus-one curve, at most twelve points must be excluded, and the
+Hasse--Weil bound then produces a fibre with three distinct rational
+points.  Two differences remain.  Aubry--Perret in place of
+Hasse--Weil drops their simplicity hypothesis, which is what lets one
+estimate carry the singular and wild cases uniformly; and the exact
+count of Proposition~\ref{prop:r5-count} replaces the deletion
+bookkeeping by an identity, which lowers the threshold to $q\geq20$
+and, through Corollary~\ref{cor:r5-forced}, pins the fibre square of
+every remaining exception at $q=17,19$.  Independent confirmation of the same table comes from the
+classification of degree-three permutation rational functions
+\cite{FerragutiMicheli2020}, as recorded in \cite[Rem.~7.6]{BPS2022}.
+
+Exact counts, rather than the vanishing test, are available too.  For
+the ten non-generic line classes Davydov, Marcugini, and Pambianco give
+the exact number of planes of each orbit through each line for
+$q\geq5$ \cite[Thm.~3.3]{DMP2022}, building on their line-orbit
+classification \cite{DMP2023,DMP2021}; G\"unay and Lavrauw give the
+point-orbit and plane-orbit distributions of the same classes for odd
+$q$ prime to three \cite{GunayLavrauw2022}.  For the generic class and
+$\operatorname{char}\F_q\neq2,3$, Kaipa and Pradhan attach to a line
+$L$ a binary quartic $\varphi_L$ and an elliptic curve $E_L$, and count
+$|W_f\cap\mathcal O_3|$ in terms of $\#E_L(\F_q)$ and the invariant
+$\eta_L\in\{0,1,2,4\}$ recording the rational factorization type of
+$\varphi_L$.  That count is the specialization of
+Proposition~\ref{prop:r5-count} discussed after
+Corollary~\ref{cor:r5-forced}, and
+Proposition~\ref{prop:r5-fibre-is-elliptic} identifies their curve with
+our fibre square.  By \eqref{eq:r5-orbit-criterion} a generic line is
+split-free exactly when $\#E_L(\F_q)=3\eta_L\leq12$, which the Hasse
+bound $\#E_L(\F_q)\geq q+1-2\sqrt q$ forbids for $q\geq20$ and permits
+only for $q\leq19$.  This is not a second route to
+Lemma~\ref{lem:s3} but the same one in other coordinates:
+Proposition~\ref{prop:r5-fibre-is-elliptic} identifies $E_L$ with $Y_f$,
+so both arguments apply a Weil-type bound to a single genus-one curve.
+What the elliptic form adds is not independence but an explanation, since
+$3\eta_L\leq12$ is visibly a bounded quantity while $\#E_L(\F_q)$ grows
+with $q$.  The generic class is settled in
+characteristic three in \cite{KaipaPradhan2025char3} and in
+characteristic two by Ceria and Pavese \cite{CeriaPavese2023}.
+
+What this section contributes is therefore not the pencil-level
+classification but its syndrome-level source and consequence.  The
+passage $f\mapsto W_f$ of Lemma~\ref{lem:hankel} is not present in that
+literature, and it is not surjective onto the lines: the
+characteristic-two inseparable unisecants, split-free as lines, are
+realized by no rank-two syndrome, as the proof of
+Proposition~\ref{prop:r5-gcd1} shows.  Neither do incidence
+distributions produce syndromes; Table~\ref{tab:r5sporadic} records
+canonical representatives in divided-power syndrome coordinates with
+their orbit sizes, stabilizers, and Frobenius fusion, and extracting
+such a list from \cite[Prop.~4.5 and Thm.~5.1]{KaipaPradhan2025} would still require
+evaluating $\#E_L$ and $\eta_L$ over all $2q-3+\mu$ generic line orbits.
+The promotion from split-free to deep, through
+Proposition~\ref{prop:r5-radius}, is likewise outside that literature,
+which contains no covering-radius or deep-hole statement.
+\end{remark}
 
 \begin{longtable}{c>{\ttfamily\small}lrrl}
 \caption{Complete sporadic orbit inventory at redundancy five.  A
@@ -320,45 +659,31 @@ $q$ & direct $=$ orbit sum & nonsporadic & sporadic\\
 \end{tabular}
 \end{table}
 
-\begin{corollary}[The balanced quantum extension at \(q=8\)]
-\label{cor:q8-quantum-extension}
-The \(1116\) projective deep-hole directions of
-\(\PRS_{\F_8}(4)\) give \(1116\) relative projective one-column
-\([10,5,6]_8\) MDS extensions.  For each extension \(D\),
-\[
- \lvert\Psi_D\rangle
-   =8^{-5/2}\sum_{c\in D}\lvert c\rangle
-\]
-is a minimum-support \(\operatorname{AME}(10,8)\) stabilizer state and determines an
-associated \([[9,1,5]]_8\) quantum MDS code.  The directions split as
-the \(360\) nonsporadic and \(756\) sporadic entries of
-Table~\ref{tab:r5-sanity}.
+\begin{remark}[No one-column MDS extension at this radius]
+\label{rem:q8-no-extension}
+At \(q=8\) the split-free count of Table~\ref{tab:r5-sanity} is
+\(1116\), splitting as \(360\) nonsporadic and \(756\) sporadic
+directions.  These are deep holes of \(\PRS_{\F_8}(4)\) by
+Proposition~\ref{prop:r5-radius} and
+Corollary~\ref{cor:splitfree}; they are not one-column MDS extensions,
+and no such extension exists.
 
-Any product-unitary equivalence between two such equal-phase states is
-local Clifford, and every transversal conversion between the associated
-quantum encoders is Clifford factor by factor.  In particular, none of
-the associated quantum MDS codes admits a transversal non-Clifford
-logical unitary.
-\end{corollary}
+The two notions differ by one column.  A syndrome direction is a deep
+hole when it lies in the span of no \(r-2\) parity-check columns and
+the radius is \(r-1\); adjoining a point to the \((q+1)\)-arc of the
+normal rational curve keeps it an arc, equivalently extends the dual
+code by one column, only when that point lies in the span of no
+\(r-1\) columns.  At redundancy five the first condition gives distance
+at least four and Proposition~\ref{prop:r5-radius} gives radius exactly
+four, so no direction achieves the distance five that an extension
+requires.  D\"ur's equivalence states this as a biconditional: the
+covering radius is \(r-1\) precisely when the arc of every normal
+rational curve in \(\mathrm{PG}(r-1,q)\) is complete, so there is no MDS
+extension of the dual by one digit
+\cite{Dur1994}, as stated by Kaipa \cite[Sec.~IV]{Kaipa2017}.  The same
+reading applies at every redundancy classified here, since each radius
+gate proves \(\rho=r-1\).
 
-\begin{proof}
-A projective deep-hole direction gives a one-column MDS extension.
-At \(q=8\), redundancy five turns the \([9,4,6]_8\) projective
-Reed--Solomon code into a \([10,5,6]_8\) MDS code, and
-Table~\ref{tab:r5-sanity} gives the count and its decomposition.
-The linear MDS--AME construction and the one-party Choi
-correspondence give the state and the \([[9,1,5]]_8\) code
-\cite{RaissiGogolinRieraAcin2018}.  The local-unitary and transversal
-claims are the MDS--CSS rigidity and conversion theorems of the
-companion paper \cite{RuddAMELU2026}.
-\end{proof}
-
-\begin{remark}
-The balance condition for a one-column redundancy-\(r\) extension is
-\(q+2=2r\).  Among the exact fixed-level classifications at
-redundancies five through seven, it selects only \((r,q)=(5,8)\):
-the formal alternatives \(q=10,12\) are not prime powers.
-The projective-semilinear orbit table classifies extensions relative
-to the distinguished punctured Reed--Solomon code; it is not asserted
-to be a complete table of local-Clifford or local-unitary state orbits.
+Independently, a \([10,5,6]_8\) MDS code would be a \(10\)-arc in
+\(\mathrm{PG}(4,8)\), and the largest arc there has \(q+1=9\) points.
 \end{remark}

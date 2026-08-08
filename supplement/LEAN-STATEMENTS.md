@@ -8,7 +8,18 @@ Lean-level trust. The aggregate
 gate imports exactly the foundation, redundancy-five, polar-induction and
 redundancy-six/seven, and stable-component gates, together with the
 `PRSUniformCoveringRadius` arithmetic and literature adapter.
-The balanced quantum corollary uses the separate cross-paper closure
+**Withdrawn.**  The paper draws no quantum consequence from the balanced `q=8`
+row.  A split-free direction is not a one-column MDS extension: an extension
+needs a syndrome outside the span of every `r-1` parity-check columns, whereas
+split-freeness supplies only `r-2`, and Dür's equivalence makes covering radius
+`r-1` the same statement as completeness of the normal rational curve's arc, so
+no such extension exists at these parameters.  The manuscript states this in the
+remark "No one-column MDS extension at this radius" in the redundancy-five
+section.  The formal modules below are retained as conditional developments
+whose extension hypothesis is unsatisfied here; nothing in the manuscript
+depends on them.
+
+The retained balanced-quantum development uses the separate cross-paper closure
 `RelativeConicArcs.Gates.PRSBalancedQuantumExtension` and audit
 `RelativeConicArcs.Gates.PRSBalancedQuantumExtensionAxiomAudit`; it is not
 folded into the 17-file geometric aggregate.
@@ -31,15 +42,20 @@ proposition, theorem, or corollary labels in the TeX include graph.
 | `lem:hankel` | `PRSFoundation.HankelKernelDictionary.not_splitFree_of_kernel_member` | Conditional terminal. The concrete Hankel dictionary and its coding semantics are inputs. |
 | `cor:splitfree` | `PRSFoundation.HankelKernelDictionary.not_splitFree_of_kernel_member`; `PRSFoundation.CoveringRadiusInput.deep_iff_splitFree` | Conditional terminal. The concrete dictionary and covering-radius premise are inputs. |
 | `thm:r5` | `PRSRedundancyFiveCertified.redundancyFiveSynthesisWithCertificate`; family arithmetic under `PRSRedundancyFive.FamilyData`; table arithmetic under `PRSRedundancyFiveCertificate` | Conditional synthesis plus kernel arithmetic. Covering radius, cubic-cover geometry, group actions, and certificate semantics remain inputs. |
-| `cor:q8-quantum-extension` | `PRSBalancedQuantumExtension.fieldEightRecord_mem_certifiedFieldRecords`; `fieldEight_projectiveDirectionCount`; `fieldEight_balancedExtensionParameters`; `fieldEight_uniqueBalancedPrimePowerRow`; `certifiedBalancedExtensions_haveQuantumConsequences`; `lengthTen_locallyUnitaryEquivalent_implies_locallyCliffordEquivalent`; `lengthTen_encoderConversion_logical_and_physical_isClifford` | Exact certificate arithmetic and balanced-row uniqueness are kernel checked. The MDS--AME and Choi semantics are explicit interface fields; the LU and transversal conclusions are kernel-checked specializations of the generic MDS--CSS theorems. No complete LU/LC orbit classification is asserted. |
 | `thm:spine` | `PRSRedundancySixSeven.redundancySixAllFieldSynthesis`; `redundancySevenAllFieldSynthesis`; `PRSPolarInduction.fifthPower_sigmaInversionOrbitCount` | Derived manuscript aggregation of the R6/R7 clauses and persistent orbit law; each clause retains its own boundary. |
 | `prop:r5-radius` | `PRSFoundation.CoveringRadiusInput.deep_iff_splitFree` | The logical use is checked; the Seroussi--Roth theorem is imported by citation. |
 | `prop:r5-gcd2` | `PRSRedundancyFive.FamilyData.family_arithmetic` and the three `deep_card_*` terminals | Family/count arithmetic is kernel checked; the geometric gcd classification is a manuscript proof. |
 | `prop:r5-gcd1` | no direct declaration | Manuscript proof, with the finite `q=7` clause supplied by Certificate R5. |
 | `prop:r5-incidence` | no direct declaration | Manuscript proof of the cubic incidence and residual-curve geometry. |
 | `lem:cyclic` | no direct declaration | Manuscript proof of the cyclic stratum. |
-| `lem:s3` | no direct declaration | Manuscript proof using the cited rational-point bound. |
-| `prop:r5-bridge` | `PRSRedundancyFiveCertificate.certified_comparison_band_has_no_sporadic`; `certified_orbit_summaries_agree_with_sporadic_records`; `CertificateValidation` | Transcription and arithmetic are kernel checked. Identification and exhaustive-search semantics remain explicit validation fields. |
+| `prop:r5-count` | `PRSRedundancyFive.ExactSplitWitnessCount.countRelation` | The exact split-witness relation is an explicit structure field; Lean checks its arithmetic consequences, and the member-by-member root count is a manuscript proof. |
+| `prop:r5-fibre-is-elliptic` | no direct declaration | Manuscript proof identifying the fibre square with the residual-discriminant double cover and hence with the cited incidence curve. |
+| `lem:r5-branch` | `PRSRedundancyFive.ExactSplitWitnessCount.branchBudget`; `ExactSplitWitnessCount.fibreSquarePoints_le_twelve`; `nonSplitWeight_le_twelve`; `nonSplitWeight_le_six_of_characteristicTwoBranchBudget`; `fibreSquarePoints_le_six_of_characteristicTwoBranchBudget` | The tame Riemann--Hurwitz budget is a structure field, and the sharper characteristic-two budget is a hypothesis of the last two theorems; the twelve-point and six-point bounds on a split-free fibre square are kernel checked. |
+| `cor:r5-equidistribution` | `PRSRedundancyFive.ExactSplitWitnessCount.splitMembers_bounds` | Kernel checked over the reals from the exact count, a bound `B` on the non-split weight, and the two-sided point bound; `B` is instantiated by the two branch-budget theorems and the point bound is imported by citation. |
+| `cor:r5-binary-shallow` | `PRSRedundancyFive.splitMembers_pos_of_characteristicTwoBranchBudget`; `fieldOrder_le_twelve_of_characteristicTwoSplitFree` | Kernel checked from the characteristic-two branch budget and the Aubry--Perret range in squared integer form; it removes `q=16` from `requiredBridgeFieldOrders`, and the monodromy geometry is a manuscript proof. |
+| `lem:s3` | `PRSRedundancyFive.fieldOrder_le_nineteen_of_splitFree` | The step from the twelve-point bound and the Aubry--Perret range to the field bound is kernel checked; the point bound itself is imported by citation and the monodromy geometry is a manuscript proof. |
+| `cor:r5-forced` | `PRSRedundancyFive.ExactSplitWitnessCount.fibreSquareInvariants_of_splitFree` | Kernel checked from the branch budget and the point bound in squared integer form; the Lean statement needs only `17 <= q <= 19`, without the manuscript's oddness hypothesis. |
+| `prop:r5-bridge` | `PRSRedundancyFive.requiredBridgeFieldOrders`; `PRSRedundancyFiveCertified.requiredBridgeFieldOrders_subset_certifiedBridgeFieldOrders`; `certifiedBridgeFieldOrders_exceed_required_only_at_sixteen`; `PRSRedundancyFiveCertificate.certified_comparison_band_has_no_sporadic`; `certified_orbit_summaries_agree_with_sporadic_records`; `CertificateValidation` | Transcription and arithmetic are kernel checked, as is the separation of the seven required bridge fields from the certificate's wider sub-threshold domain, which exceeds them only at `q=16`. Identification and exhaustive-search semantics remain explicit validation fields. |
 | `thm:polar-construction` | `PRSPolarInduction.iteratedProjectiveSequenceContraction_map`; `sequenceContraction_agrees_with_finite`; `PointedKernelLift.lift_splitSquarefreeKernelMember` | Kernel algebra and a conditional squarefree-lift terminal. The polynomial/kernel identification is an input. |
 | `lem:marker-collision` | no direct declaration | Manuscript marker-collision proof. |
 | `lem:uniform-collision` | no direct declaration | Manuscript separability and collision-degree proof. |

@@ -425,6 +425,30 @@
       "sha256": "ac6130c3f17e19940dbec6a56e27a4b5cb582a3e48d7daa5baa04f77a44f70fa"
     },
     {
+      "bytes": 2406,
+      "path": "evidence/r5-elliptic-incidence/2026-08-07-r5-elliptic-incidence-census.json",
+      "public_label": "Exact split-witness count at redundancy five",
+      "replay_class": "compare",
+      "role": "census",
+      "sha256": "cac2355a93218da3bed7f2b6f190b3537cddc8d55b413e681013f9e981d55fbd"
+    },
+    {
+      "bytes": 13549,
+      "path": "evidence/r5-elliptic-incidence/2026-08-07-r5-elliptic-incidence-replay.py",
+      "public_label": "Exact split-witness count at redundancy five",
+      "replay_class": "rederive",
+      "role": "replay",
+      "sha256": "2833dbc2d0b0116313f07704d0f741e249fb044d5949108d6651a75c5648b8d4"
+    },
+    {
+      "bytes": 220,
+      "path": "evidence/r5-elliptic-incidence/2026-08-07-r5-elliptic-incidence.sha256",
+      "public_label": "Exact split-witness count at redundancy five",
+      "replay_class": "compare",
+      "role": "checksum",
+      "sha256": "232849ccd9b502308075d1d50c396dc2c34a51d2858dcbdfc39172055f3b3606"
+    },
+    {
       "bytes": 6168,
       "path": "CERTIFICATE-SCHEMA.md",
       "public_label": "Supplement",
@@ -457,12 +481,12 @@
       "sha256": "78d1e6150abe7e72292cf70bca6347780da4de22d8a9ac21245387c59c6dba12"
     },
     {
-      "bytes": 18721,
+      "bytes": 21160,
       "path": "LEAN-STATEMENTS.md",
       "public_label": "Supplement",
       "replay_class": "compare",
       "role": "Lean statement-adequacy source",
-      "sha256": "a565954653c85e0f6370e723bfcd7c6a8979b9a64b1ac48db5fc98ac886515c1"
+      "sha256": "ff0cb0ac65c341ae92fa165b605bb4098ebfbe007f748ae045f2efbf810d1496"
     },
     {
       "bytes": 9092,
@@ -497,20 +521,20 @@
       "sha256": "04ca5952db5f167a38dffe9b70d5e083dd024eab7c8b69f81763d50e099766c7"
     },
     {
-      "bytes": 14585,
+      "bytes": 15090,
       "path": "package_evidence_bundle.py",
       "public_label": "Supplement",
       "replay_class": "compare",
       "role": "Bundle verifier",
-      "sha256": "54559e6e94e59d1b3152c410151f14c3039fad307a5f318b39aa2d17d34db03a"
+      "sha256": "6d231b8b1d6c7384c482c6c408433400ae2f23305cf61514de17277e35574f79"
     },
     {
-      "bytes": 16488,
+      "bytes": 16721,
       "path": "verify.py",
       "public_label": "Supplement",
       "replay_class": "compare",
       "role": "Top-level verifier",
-      "sha256": "fe9fdb9e1feafaad11667b7040e4e1bfdf2b81068495cc542357c83bf0a62dde"
+      "sha256": "12d4161b5401a34d24fb535efe8ec5dd72a464269d0621175c2b95778afe0d5f"
     },
     {
       "bytes": 17225,

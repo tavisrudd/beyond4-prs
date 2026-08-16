@@ -403,9 +403,10 @@ most two reduced simple poles, so genus at most one.  A nonzero good-base
 selector has total degree at most \(102\) in the five ordered roots.  For a
 good base the forbidden
 \(x\)-values have degrees \(5,2,2,10,4\), totaling \(23\), and therefore
-delete at most \(2\cdot23+2=48\) points of the smooth double cover.  The
-zero bound gives a good base for \(q\ge128\), while Hasse--Weil then supplies
-a surviving point.
+delete at most \(2\cdot23+2=48\) points of the normalized double cover.  The
+zero bound gives a good base for \(q\ge128\), while the Aubry--Perret bound for
+a geometrically integral projective curve of arithmetic genus at most one then
+supplies a surviving point \cite[p.~468]{AubryPerret1995}.
 The complete rank-two invariant-block quotient certificate at $q=64$ and the
 $q=16,32$ quotient certificates cover the remaining admissible fields.
 Their checkers rebuild
@@ -468,6 +469,339 @@ Thus the criterion loses neither infinity nor the degenerate linear-system
 cases.
 \end{proof}
 
+The next three lemmas carry the all-field part of the theorem below: the
+first fixes the rank of the coefficient map off the invariant block, the
+second makes the final-pair cover geometrically integral, and the third
+selects a rational base of five roots with an effective degree bound.
+
+\begin{lemma}[Rank of the coefficient map off the invariant block]
+\label{lem:m9-rank}
+Let $z=(z_2,\ldots,z_7)$ and let $h=(h_0,\ldots,h_5)^{\mathsf T}$ collect the
+free coefficients of the monic sextic of Proposition~\ref{prop:final-pair}.
+Then
+\[
+ (A_0,A_1,A_2,A_3)^{\mathsf T}=M_zh+(0,0,z_7,z_6)^{\mathsf T},
+\quad
+M_z=\begin{pmatrix}
+ z_3&z_4&z_5&z_6&z_7&0\\
+ z_2&z_3&z_4&z_5&z_6&z_7\\
+ 0&z_2&z_3&z_4&z_5&z_6\\
+ 0&0&z_2&z_3&z_4&z_5
+\end{pmatrix},
+\autoeqtag{eq:binary-hankel-rank}
+\]
+and $\operatorname{rank}M_z\geq3$ whenever $z_4\neq0$ or $z_5\neq0$.  In that
+case exactly one of the following holds.
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item $\operatorname{rank}M_z=4$, and $h\mapsto(A_0,A_1,A_2,A_3)$ is onto
+      $\mathbb A^4$.
+\item $\operatorname{rank}M_z=3$, the left kernel of $M_z$ is a line
+      $\langle\ell\rangle$, and the image of $h\mapsto(A_0,A_1,A_2,A_3)$ is
+      the affine hyperplane
+      \[
+       \ell_0A_0+\ell_1A_1+\ell_2A_2+\ell_3A_3=\kappa,
+       \qquad\kappa=\ell_2z_7+\ell_3z_6 .
+       \autoeqtag{eq:m9-affine-relation}
+      \]
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Reading $A_j=\sum_{i=2}^7z_ih_{i+j-3}$ row by row, with $h_6=1$ and $h_k=0$
+for $k\notin\{0,\ldots,6\}$, gives the displayed affine form; the constant
+vector collects the two $h_6$ terms, which occur in $A_2$ and $A_3$ only.
+A row vector $\ell$ satisfies $\ell M_z=0$ exactly when
+\[
+\begin{aligned}
+ \ell_0z_3+\ell_1z_2&=0,&
+ \ell_0z_4+\ell_1z_3+\ell_2z_2&=0,\\
+ \ell_0z_5+\ell_1z_4+\ell_2z_3+\ell_3z_2&=0,&
+ \ell_0z_6+\ell_1z_5+\ell_2z_4+\ell_3z_3&=0,\\
+ \ell_0z_7+\ell_1z_6+\ell_2z_5+\ell_3z_4&=0,&
+ \ell_1z_7+\ell_2z_6+\ell_3z_5&=0,
+\end{aligned}
+\autoeqtag{eq:m9-column-relations}
+\]
+one equation per column, read left to right.
+
+Suppose $\operatorname{rank}M_z\leq2$, so the left kernel $K$ has dimension at
+least two.  Either $K$ contains a nonzero vector with $\ell_0=\ell_1=0$, or
+$\ell\mapsto(\ell_0,\ell_1)$ is injective on $K$ and hence, $\dim K\geq2$,
+also onto.
+
+In the first case take $\ell=(0,0,\ell_2,\ell_3)\neq0$.  If $\ell_2\neq0$,
+normalize $\ell_2=1$: the second, third, fourth and fifth equations of
+\eqref{eq:m9-column-relations} read $z_2=0$, $z_3=\ell_3z_2$,
+$z_4=\ell_3z_3$ and $z_5=\ell_3z_4$, so $z_2=z_3=z_4=z_5=0$ in turn.  If
+$\ell_2=0$ then $\ell_3\neq0$, and the third through sixth equations read
+$\ell_3z_2=\ell_3z_3=\ell_3z_4=\ell_3z_5=0$, with the same conclusion.
+
+In the second case $K$ contains $(1,0,\ell_2,\ell_3)$ and
+$(0,1,\ell_2',\ell_3')$.  The first equation applied to the second vector
+gives $z_2=0$, and applied to the first gives $z_3=0$; the second and third
+equations applied to the first vector then give $z_4=\ell_2z_2=0$ and
+$z_5=\ell_2z_3+\ell_3z_2=0$.
+
+Either case contradicts $z_4\neq0$ or $z_5\neq0$, so
+$\operatorname{rank}M_z\in\{3,4\}$.  At rank four the linear map $h\mapsto
+M_zh$ is onto, hence so is its translate.  At rank three the left kernel is a
+line $\langle\ell\rangle$, the image of $h\mapsto M_zh$ is the linear
+hyperplane $\sum_i\ell_iA_i=0$, and translating by $(0,0,z_7,z_6)$ moves the
+right-hand side to $\kappa=\ell_2z_7+\ell_3z_6$.
+\end{proof}
+
+\begin{lemma}[Geometric nontriviality of the final-pair Artin--Schreier
+cover]\label{lem:m9-nonsquare}
+Let $k$ be algebraically closed of characteristic two, let $z\in\cM_9(k)$
+satisfy $z_4\neq0$ or $z_5\neq0$, and let $L\subseteq\mathbb A^4$ be the
+image of the coefficient map of Lemma~\ref{lem:m9-rank}.  Then the reduced
+divisor $Q=0$ in $L$ has an irreducible component $\mathfrak q$ on which
+$A_3$ and $\Delta$ do not vanish identically and on whose function field
+$A_1/A_3$ is not a square.  Ordering the six roots leaves that conclusion
+intact, so the double pole of $N\Delta/Q^2$ along $\mathfrak q$ does not
+reduce and \eqref{eq:artin-schreier-cover} is geometrically integral.
+\end{lemma}
+
+\begin{proof}
+On $Q=0$ with $A_3\neq0$ one has $A_0=A_1A_2/A_3$, hence
+\[
+ N=A_1^2+\frac{A_1A_2^2}{A_3}=\frac{A_1(A_1A_3+A_2^2)}{A_3}
+  =\frac{A_1\Delta}{A_3},
+ \qquad
+ N\Delta=\frac{A_1}{A_3}\,\Delta^2 .
+ \autoeqtag{eq:m9-double-pole}
+\]
+Since $u^2\equiv u$ modulo $\wp(u)=u^2+u$, the double pole of $N\Delta/Q^2$
+along a component of $Q=0$ reduces to a simple pole exactly when $A_1/A_3$ is
+a square in the function field of that component.  That square class is what
+the two rank cases test.
+
+\emph{Rank four.}  Here $L=\mathbb A^4$ and the coordinates $A_i$ are
+independent.  The partial derivatives of $Q=A_0A_3+A_1A_2$ are
+$A_3,A_2,A_1,A_0$, whose only common zero is the origin, so the projective
+quadric is smooth and $X=V(Q)$ is irreducible; in particular $A_3$ and
+$\Delta$ do not vanish on it identically.  Inside $X$ lie the planes
+$\Pi_1=V(A_0,A_1)$, $\Pi_{13}=V(A_1,A_3)$ and $\Pi_2=V(A_2,A_3)$, and
+$V(A_1)\cap X=\Pi_1\cup\Pi_{13}$, $V(A_3)\cap X=\Pi_{13}\cup\Pi_2$.  At the
+generic point of $\Pi_1$ the functions $A_2,A_3$ are units and
+$A_0=A_1A_2/A_3$, so the local ring of $X$ there is a discrete valuation ring
+with uniformizer $A_1$; symmetrically $A_3$ is a uniformizer at $\Pi_2$,
+where $A_0,A_1$ are units and $A_2=A_0A_3/A_1$; and at $\Pi_{13}$ the two
+relations $A_3=A_1A_2/A_0$ and $A_1=A_0A_3/A_2$ show that $A_1$ and $A_3$
+generate the same maximal ideal.  Hence
+\[
+ \operatorname{div}\left(\frac{A_1}{A_3}\right)=[\Pi_1]-[\Pi_2],
+\]
+with both multiplicities equal to one.  A square has even multiplicity along
+every prime divisor, so $A_1/A_3$ is not a square in $k(X)$, and
+$\mathfrak q=X$ serves.
+
+\emph{Rank three, principal case.}  Let \eqref{eq:m9-affine-relation} be the
+relation and assume first $(\ell_0,\ell_1)\neq(0,0)$.  We claim some
+component $\mathfrak q$ of $Q=0$ in $L$ carries $A_2$ and $A_3$ as
+algebraically independent functions.  Otherwise every component lies in an
+affine plane $\alpha A_2+\beta A_3=\gamma$ with $(\alpha,\beta)\neq(0,0)$.
+Such a plane is not all of $L$, because $(0,0,\alpha,\beta)$ is not
+proportional to $\ell$; and a component of the quadric surface $Q|_L$ is
+either that whole surface, which has degree two and so lies in no plane, or a
+plane.  Hence every component is one of the planes
+$\alpha A_2+\beta A_3=\gamma$, and $Q|_L$, being of degree two, is a scalar
+multiple of a product of two of those linear forms, hence a polynomial in
+$A_2,A_3$ alone.  That is impossible: if $\ell_0\neq0$,
+eliminating $A_0$ leaves
+$Q|_L=A_3(\kappa+\ell_1A_1+\ell_2A_2+\ell_3A_3)/\ell_0+A_1A_2$, whose
+coefficient of $A_1$ is $\ell_1A_3/\ell_0+A_2\neq0$; and if $\ell_0=0$,
+$\ell_1\neq0$, eliminating $A_1$ leaves
+$Q|_L=A_0A_3+A_2(\kappa+\ell_2A_2+\ell_3A_3)/\ell_1$, which contains
+$A_0A_3$.  Fix such a component $\mathfrak q$.  On it $A_3\not\equiv0$ and
+$\ell_0A_2+\ell_1A_3\not\equiv0$, since either vanishing is a linear
+dependence between $A_2$ and $A_3$.
+
+Substituting $A_0=A_1A_2/A_3$ into \eqref{eq:m9-affine-relation} and clearing
+$A_3$ gives $A_1(\ell_0A_2+\ell_1A_3)=A_3(\kappa+\ell_2A_2+\ell_3A_3)$, that
+is
+\[
+ \frac{A_1}{A_3}=\frac{\kappa+\ell_2A_2+\ell_3A_3}
+                      {\ell_0A_2+\ell_1A_3}
+ \autoeqtag{eq:m9-rank-three-slice}
+\]
+on $\mathfrak q$.  Together with $A_0=A_1A_2/A_3$ and
+\eqref{eq:m9-affine-relation} this writes every coordinate as a rational
+function of $A_2,A_3$, so $k(\mathfrak q)=k(A_2,A_3)$.  In characteristic two
+a rational function of
+two independent variables is a square exactly when both of its partial
+derivatives vanish.  Writing $P$ and $D$ for the numerator and denominator of
+\eqref{eq:m9-rank-three-slice},
+\[
+ \frac{\partial}{\partial A_2}\frac PD=\frac{\ell_2D+\ell_0P}{D^2}
+ =\frac{(\ell_1\ell_2+\ell_0\ell_3)A_3+\ell_0\kappa}{D^2},
+ \qquad
+ \frac{\partial}{\partial A_3}\frac PD
+ =\frac{(\ell_1\ell_2+\ell_0\ell_3)A_2+\ell_1\kappa}{D^2},
+\]
+so $A_1/A_3$ is a square on $\mathfrak q$ only if
+\[
+ \ell_0\kappa=\ell_1\kappa=0,\qquad \ell_1\ell_2=\ell_0\ell_3 .
+ \autoeqtag{eq:m9-square-obstruction}
+\]
+
+Those equalities force $z_4=z_5=0$.  If $\kappa\neq0$ then
+$\ell_0=\ell_1=0$, and the first case of the proof of
+Lemma~\ref{lem:m9-rank} applies verbatim to $\ell$.  If $\kappa=0$ and
+$\ell_0=0$ then $\ell_1\ell_2=0$; for $\ell_1=0$ the same first case applies,
+while for $\ell_2=0$ and $\ell_1\neq0$ the first four equations of
+\eqref{eq:m9-column-relations} read $\ell_1z_2=0$, $\ell_1z_3=0$,
+$\ell_1z_4+\ell_3z_2=0$ and $\ell_1z_5+\ell_3z_3=0$, giving
+$z_2=z_3=z_4=z_5=0$.  Finally let $\ell_0\neq0$; then $\kappa=0$, and scaling
+$\ell_0=1$ and writing $\lambda=\ell_1$, $\mu=\ell_2$, $\ell_3=\lambda\mu$,
+the first three equations of \eqref{eq:m9-column-relations} give
+\[
+ z_3=\lambda z_2,\qquad z_4=(\lambda^2+\mu)z_2,\qquad
+ z_5=\lambda(\lambda^2+\mu)z_2,
+ \autoeqtag{eq:m9-borel-elimination}
+\]
+the fourth gives $z_6=(\lambda^4+\lambda^2\mu+\mu^2)z_2$, and the fifth
+substituted into the sixth gives
+$(\lambda^2+\mu)z_6+\lambda^2\mu z_4=(\lambda^2+\mu)^3z_2=0$.  If $z_2=0$
+then \eqref{eq:m9-borel-elimination} and the remaining equations force $z=0$;
+otherwise $\lambda^2+\mu=0$ and \eqref{eq:m9-borel-elimination} gives
+$z_4=z_5=0$.
+Both outcomes are excluded, so $A_1/A_3$ is not a square on $\mathfrak q$.
+
+\emph{Rank three, relation in $A_2,A_3$ only.}  Suppose $\ell_0=\ell_1=0$, so
+the relation is $\ell_2A_2+\ell_3A_3=\kappa$ and $A_0,A_1$ are unconstrained
+on $L$.  If $\ell_2\neq0$, use $(A_0,A_1,A_3)$ as coordinates on $L$ and
+substitute $A_2=(\kappa+\ell_3A_3)/\ell_2$:
+\[
+ Q|_L=A_3A_0+A_1(\kappa+\ell_3A_3)/\ell_2 .
+\]
+This is of degree one in $A_0$, so it is irreducible unless $A_3$ divides its
+constant term, which happens only for $\kappa=0$, where
+$Q|_L=A_3(A_0+\ell_3A_1/\ell_2)$.  In the irreducible case the unique
+component carries $A_1$ and $A_3$ as independent coordinates; in the split
+case the component $A_0=\ell_3A_1/\ell_2$ does.  On such a component
+$\partial(A_1/A_3)/\partial A_1=1/A_3\neq0$, so $A_1/A_3$ is not a square.
+If instead $\ell_2=0$, then $\ell_3\neq0$ and $A_3=\kappa/\ell_3$ is constant
+on $L$.  For $\kappa=0$ the function $A_3$ vanishes identically, so the last
+row of $M_z$ vanishes and $z_2=z_3=z_4=z_5=0$, which is excluded; for
+$\kappa\neq0$ the surface $Q|_L=\kappa A_0/\ell_3+A_1A_2$ is irreducible with
+$A_1,A_2$ independent on it, and $A_1/A_3$ is a nonzero constant multiple of
+$A_1$, again not a square.
+
+\emph{The component avoids $\Delta=0$.}  On $A_3\neq0$ the locus $Q=\Delta=0$
+is $\{(u^3c,u^2c,uc,c)\}$, the two-dimensional irreducible cone over the
+twisted cubic, and on $A_3=0$ it is the plane $A_2=A_3=0$.  The chosen
+$\mathfrak q$ has $A_3\not\equiv0$, so if $\mathfrak q$ were contained in
+$\Delta=0$ it would equal that cone, forcing
+$\ell_0u^3c+\ell_1u^2c+\ell_2uc+\ell_3c=\kappa$ for all $u$ and $c$, hence
+$\ell=0$ and $\kappa=0$.  In the rank-four case $\mathfrak q$ has dimension
+three and the cone has dimension two.  Either way
+$\Delta\not\equiv0$ on $\mathfrak q$, so \eqref{eq:m9-double-pole} really
+computes the double-pole coefficient there.
+
+\emph{Passage to ordered roots.}  The coefficient map $h\mapsto A$ is onto
+$L$ with linear fibers, so the preimage of $\mathfrak q$ is irreducible and
+its function field is a purely transcendental extension of
+$k(\mathfrak q)$, which acquires no new square roots of elements of
+$k(\mathfrak q)$.  Ordering the six roots is a finite separable base change,
+and adjoining a square root in characteristic two is purely inseparable, so
+it cannot make $A_1/A_3$ a square either.  Hence the double pole survives and
+\eqref{eq:artin-schreier-cover} is geometrically integral.
+\end{proof}
+
+\begin{lemma}[Good-base selector and degree bound]\label{lem:m9-selector}
+Let $z$ satisfy $z_4\neq0$ or $z_5\neq0$.  Fix five roots $r_1,\ldots,r_5$
+with $g(t)=\prod_{i=1}^5(t+r_i)=\sum_{i=0}^5g_it^i$, let $x$ be the sixth
+root, and put
+\[
+ B_j=\sum_{i=2}^7z_ig_{i+j-4}\quad(0\leq j\leq4),
+ \qquad\text{so that}\qquad A_j=B_j+xB_{j+1}.
+ \autoeqtag{eq:m9-five-root-split}
+\]
+Then $Q=q_2x^2+q_1x+q_0$ with
+\[
+ q_2=[x^2]Q=B_1B_4+B_2B_3,\qquad
+ q_1=Q'=B_0B_4+B_2^2,\qquad
+ q_0=B_0B_3+B_1B_2,
+ \autoeqtag{eq:m9-Q-coefficients}
+\]
+neither $q_2$ nor $q_1$ vanishes identically in $g_0,\ldots,g_4$, and
+$N\Delta$ and $R=((N\Delta)')^2+(Q')^2N\Delta$ have degree at most four in
+$x$.  Write $R=\sum_{i=0}^4R_ix^i$ and let $\rho=\rho_1x+\rho_0$ be the
+pseudo-remainder of $R$ by $Q$, defined by $q_2^3R=SQ+\rho$; explicitly
+\[
+\begin{aligned}
+ \rho_1&=q_2^3R_1+q_2^2q_1R_2+(q_2^2q_0+q_2q_1^2)R_3+q_1^3R_4,\\
+ \rho_0&=q_2^3R_0+q_2^2q_0R_2+q_2q_1q_0R_3+(q_2q_0^2+q_1^2q_0)R_4 .
+\end{aligned}
+ \autoeqtag{eq:m9-pseudo-remainder}
+\]
+Some $\rho_i$ is a nonzero polynomial, and the product of that $\rho_i$ with
+$q_2$, $q_1$ and the Vandermonde $\prod_{i<j}(r_i+r_j)$ is a nonzero
+polynomial of degree at most
+\[
+ 14+2+2+4=22
+ \autoeqtag{eq:m9-selector-degree}
+\]
+in each root coordinate.  Consequently every binary $q\geq32$ admits five
+distinct rational roots for which $Q$ is a genuine quadratic in $x$ with
+$Q'\neq0$ and $Q\nmid R$.
+\end{lemma}
+
+\begin{proof}
+Expanding $A_0A_3+A_1A_2$ with $A_j=B_j+xB_{j+1}$ gives
+\eqref{eq:m9-Q-coefficients}; the two middle terms $B_1B_3$ cancel, and in
+characteristic two $Q'=\mathrm dQ/\mathrm dx$ is the coefficient $q_1$.  Each
+$A_j$ is linear in $x$, so $\Delta$, $N$ and $Q$ have degree at most two,
+$N\Delta$ degree at most four, $(N\Delta)'$ degree at most two, and $R$
+degree at most four.
+
+Neither $q_2$ nor $q_1$ is the zero polynomial.  Written out,
+\[
+\begin{aligned}
+ B_0&=z_4g_0+z_5g_1+z_6g_2+z_7g_3,&
+ B_1&=z_3g_0+z_4g_1+z_5g_2+z_6g_3+z_7g_4,\\
+ B_2&=z_2g_0+z_3g_1+z_4g_2+z_5g_3+z_6g_4+z_7,&
+ B_3&=z_2g_1+z_3g_2+z_4g_3+z_5g_4+z_6,\\
+ B_4&=z_2g_2+z_3g_3+z_4g_4+z_5 .
+\end{aligned}
+\]
+In $q_1=B_0B_4+B_2^2$ the square $B_2^2$ contributes only square monomials.
+The coefficients of $g_0^2$, $g_4^2$, $g_2^2$, $g_1^2$, $g_3^2$ and $1$ are
+$z_2^2$, $z_6^2$, $z_4^2+z_2z_6$, $z_3^2$, $z_5^2+z_3z_7$ and $z_7^2$; read
+in that order they force $z_2=z_6=z_4=z_3=z_5=z_7=0$.  In
+$q_2=B_1B_4+B_2B_3$ the coefficients of $g_0g_1$, $g_1g_2$, $g_1g_4$ and
+$g_3g_4$ are $z_2^2$, $z_3^2$, $z_4^2+z_3z_5+z_2z_6$ and $z_5^2+z_3z_7$; read
+in that order they force $z_2=z_3=z_4=z_5=0$.  Both conclusions contradict
+the hypothesis.
+
+Pseudo-division by the degree-two polynomial $Q$ with leading coefficient
+$q_2$ takes three steps, each replacing $R$ by $q_2R$ plus a multiple of $Q$;
+carrying them out gives \eqref{eq:m9-pseudo-remainder}.  Over the fraction
+field of $k[g_0,\ldots,g_4]$ the element $q_2$ is invertible, so $\rho=0$ would
+say $Q\mid R$.  Lemma~\ref{lem:m9-nonsquare} rules that out: the double pole
+along the component $\mathfrak q$ does not reduce, which is exactly the
+nonvanishing of $R$ modulo $Q$.  Hence some $\rho_i\neq0$.
+
+For the degrees, each $g_j$ is elementary symmetric in $r_1,\ldots,r_5$ and
+therefore multi-affine, so each $B_j$ is multi-affine, each of
+$q_2,q_1,q_0$ has
+degree at most two in every root coordinate, each coefficient of $N\Delta$ at
+most four, and each $R_i$ at most eight.  By
+\eqref{eq:m9-pseudo-remainder} each $\rho_i$ has degree at most
+$6+8=14$.  The Vandermonde $\prod_{i<j}(r_i+r_j)$ has degree four in each
+root, which gives \eqref{eq:m9-selector-degree}.
+
+Finally, a nonzero polynomial of degree at most $d$ in each of $n$ variables
+separately does not vanish identically on $S^n$ for any set $S$ with
+$|S|>d$: fix all but one variable at values where the polynomial is nonzero,
+and use that a nonzero univariate polynomial of degree at most $d$ has at
+most $d$ roots.  With $d=22$ and $S=\F_q$, every $q>22$, hence every binary
+$q\geq32$, carries a point where the product above is nonzero.  There the
+Vandermonde factor makes the five roots distinct, $q_2\neq0$ makes $Q$
+quadratic in $x$, $q_1=Q'\neq0$, and $\rho\neq0$ gives $Q\nmid R$.
+\end{proof}
+
 \begin{theorem}[Empty first higher Lucas carrier]\label{thm:m9-shallow}
 For every $m\geq4$,
 \[
@@ -492,54 +826,22 @@ the affine slice
 \]
 modulo its upper-Borel stabilizer.
 
-For the all-field argument, the coefficient map
-\[
- (A_0,A_1,A_2,A_3)^{\mathsf T}=M_zh+(0,0,z_7,z_6)^{\mathsf T},
-\quad
-M_z=\begin{pmatrix}
- z_3&z_4&z_5&z_6&z_7&0\\
- z_2&z_3&z_4&z_5&z_6&z_7\\
- 0&z_2&z_3&z_4&z_5&z_6\\
- 0&0&z_2&z_3&z_4&z_5
-\end{pmatrix}
-\autoeqtag{eq:binary-hankel-rank}
-\]
-has rank at least three whenever $z_4\ne0$ or $z_5\ne0$.
-Indeed, a two-dimensional left kernel either contains a vector supported
-in its last two coordinates or projects isomorphically to the first two;
-the boundary columns then successively force
-$z_2=z_3=z_4=z_5=0$, a contradiction.  At rank four, $Q$ is an
-irreducible quadric and the double-pole coefficient of
-\eqref{eq:final-pair-trace} along $Q=0$
-is nonsquare.  At rank three, write the unique affine relation as
-$\sum\ell_iA_i=\kappa$.  If that coefficient were square on every
-component of $Q=0$, differentiation gives
-\[
- \ell_0\kappa=\ell_1\kappa=0,\qquad
- \ell_1\ell_2=\ell_0\ell_3.
-\]
-The six column relations in \eqref{eq:binary-hankel-rank} again force
-$z_4=z_5=0$.  Hence the
-Artin--Schreier cover is geometrically integral throughout the complement.
-The displayed rank split and derivative identities are manuscript
-calculations.  The public rank-two replay reconstructs the complete
-\(q=64\) rational-twist mass and its five witnesses; it is not a symbolic
-all-field proof.
+In particular $z_4\neq0$, so Lemma~\ref{lem:m9-rank} applies:
+\eqref{eq:binary-hankel-rank} has rank three or four, and in either case
+Lemma~\ref{lem:m9-nonsquare} makes the final-pair cover
+\eqref{eq:artin-schreier-cover} geometrically integral, with a component of
+$Q=0$ along which the double pole does not reduce.  The rank split, the
+derivative identity \eqref{eq:m9-square-obstruction} and its elimination are
+manuscript calculations.  The public rank-two replay reconstructs the
+complete \(q=64\) rational-twist mass and its five witnesses; it is not a
+symbolic all-field proof.
 
-Fix five roots and let $x$ be the sixth.  Write
-$A_j=B_j+xB_{j+1}$.  Then
-
-\[
- Q'=B_0B_4+B_2^2,
- \qquad [x^2]Q=B_1B_4+B_2B_3,
-\]
-
-and coefficient comparison shows that both are nonzero polynomials on the
-complement.  Geometric integrality makes at least one coefficient of the
-quadratic pseudo-remainder nonzero.  Its product with $Q'$, $[x^2]Q$, and
-the five-root Vandermonde is therefore nonzero and has degree at most
-$14+2+2+4=22$ in each root coordinate.  The finite-field grid bound supplies
-a rational good base for every binary $q\geq32$.  The reduced cover has at
+Fix five roots and let $x$ be the sixth, as in
+\eqref{eq:m9-five-root-split}.  Lemma~\ref{lem:m9-selector} then supplies,
+for every binary $q\geq32$, five distinct rational roots at which $Q$ is
+quadratic in $x$ with $Q'\neq0$ and $Q\nmid R$; its selector product has
+individual root degree at most $22$, which is what the grid bound needs.
+The reduced cover has at
 most two simple poles, hence genus at most one.  The exact deletion table on the
 normalized cover is
 \[
@@ -603,6 +905,303 @@ cancellation, whose contained case is persistent.  Hence every factor in
 the bound \eqref{eq:binary-deletion-budget} is proper on the stated complement.
 \end{proof}
 
+The binary top step of the next proposition needs its own slice, because in
+characteristic two the divided cubic discriminant is the square
+$(AD_3+BC)^2$ and cannot separate a split cubic from a nonsplit one.  The
+replacement keeps an ordered residual root.
+
+\begin{lemma}[Characteristic-two ordered-Hessian slice and selector]
+\label{lem:r10-hessian}
+Let $q$ be a power of two, let
+$f\in\PP(\Gamma^9E)(\F_q)$ with $f\notin\cP_{10}\cup\cM^{\max}_{10,2}$, and put
+$k=\overline{\F_q}$; the geometric assertions below are taken after base change
+to $k$, while the selector polynomials of (iii) have coefficients in the field
+generated by those of $f$, hence are defined over $\F_q$.  For
+$R\in\Sym^5E^\vee$ squarefree let
+\[
+ \ell_{f,R}=\PP\{\,\iota_{R\lambda}f:\lambda\in E^\vee\,\}
+ \subset\PP(\Gamma^3E)
+ \autoeqtag{eq:hessian-root-line}
+\]
+be the pencil obtained by iterating the contraction of \eqref{eq:lift} along
+the six linear factors of $R\lambda$, spanned by the divided cubics
+$U=(A,B,C,D_3)$ and $V=(a,b,c,d)$, and write $c_{u,v}=uU+vV$.  Put
+$h_R=\iota_Rf\in\Gamma^4E$, so that $U$ and $V$ are its two coordinate shifts,
+\[
+ U=(h_0,h_1,h_2,h_3),\qquad V=(h_1,h_2,h_3,h_4),
+ \autoeqtag{eq:hessian-shift-pencil}
+\]
+and let
+\[
+ \mathcal D(R)=\det\begin{pmatrix}
+ h_0&h_1&h_2\\ h_1&h_2&h_3\\ h_2&h_3&h_4\end{pmatrix}
+ \autoeqtag{eq:hessian-terminal-determinant}
+\]
+be the terminal persistent determinant of \(h_R\), that is the cubic $D$ of
+Proposition~\ref{prop:reduced-terminal-carrier} evaluated at $h_R$.  Write
+$C_3$ for the twisted cubic of divided cubes in $\PP(\Gamma^3E)$, which is the
+base locus of the divided Hessian.  Then the following hold.
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item The Hankel kernel of $c_{u,v}$ is spanned by the divided Hessian
+      $P_0X^2+P_1XY+P_2Y^2$, where
+      \[
+      \begin{aligned}
+       P_0&=(BD_3+C^2)u^2+(Bd+bD_3)uv+(bd+c^2)v^2,\\
+       P_1&=(AD_3+BC)u^2+(Ad+aD_3+Bc+bC)uv+(ad+bc)v^2,\\
+       P_2&=(AC+B^2)u^2+(Ac+aC)uv+(ac+b^2)v^2 .
+      \end{aligned}
+      \autoeqtag{eq:hessian-coefficients}
+      \]
+      The ordered-Hessian incidence
+      \[
+       \cC_{f,R}:\quad P_0X^2+P_1XY+P_2Y^2=0
+       \subset\PP^1_{u:v}\times\PP^1_{X:Y}
+       \autoeqtag{eq:hessian-incidence}
+      \]
+      has bidegree $(2,2)$ and arithmetic genus one, and off $P_1=0$ it is
+      the Artin--Schreier cover of class $P_0P_2/P_1^2$.
+\item After the vertical factors $\ell_{f,R}\cap C_3$ are removed,
+      \eqref{eq:hessian-incidence} is geometrically integral unless one of
+      three things happens: the pencil has a common kernel quadratic, which for
+      the shift pencil \eqref{eq:hessian-shift-pencil} is exactly
+      $\mathcal D(R)=0$; or $\ell_{f,R}$ lies in the Veronese surface $\Sigma$
+      of lines with a common quadratic factor, whose member attached to
+      $[Q]=[a:b:c]\in\PP(\Sym^2E^\vee)$ is the line spanned by the two shifts
+      $(a,b,c,0)$ and $(0,a,b,c)$ of $Q$; or $\ell_{f,R}$ lies in one of the two
+      Fano rulings of the quadric $\mathcal Q_0=\{AD_3+BC=0\}$.  The first case
+      is the horizontal-factor degeneracy and the last is the inseparable one.
+      In Pl\"ucker coordinates
+      $(z_0,\ldots,z_5)=(p_{01},p_{02},p_{03},p_{12},p_{13},p_{23})$ the
+      surface $\Sigma$ has the parametrization
+      $[a^2:ab:ac:b^2+ac:bc:c^2]$ and is cut out by the $2\times2$ minors of
+      \[
+       \begin{pmatrix}z_0&z_1&z_2\\ z_1&z_3+z_2&z_4\\ z_2&z_4&z_5\end{pmatrix},
+       \autoeqtag{eq:hessian-veronese-ideal}
+      \]
+      by $z_1=z_4=0$, $z_2=z_3$, $z_0z_5=z_2^2$ for the tangent ruling, and by
+      \[
+       \cN:\quad z_0=z_5=0,\quad z_2=z_3,\quad z_1z_4=z_2^2
+       \autoeqtag{eq:hessian-complementary-ruling}
+      \]
+      for the complementary ruling.  Both rulings lie in
+      $\mathcal D=0$: the three coefficients of $P_1$ are
+      $e_1=h_0h_3+h_1h_2$, $e_2=h_0h_4+h_2^2$ and $e_3=h_1h_4+h_2h_3$, and
+      \[
+       \mathcal D=h_1e_3+h_2e_2+h_3e_1
+       \autoeqtag{eq:hessian-determinant-identity}
+      \]
+      identically, so $P_1\equiv0$ forces $\mathcal D=0$.  Write
+      $\cC^{\mathrm{nv}}_{f,R}$ for the residual curve obtained from
+      \eqref{eq:hessian-incidence} by dividing $P_0,P_1,P_2$ by their common
+      factor in $(u,v)$.  It has bidegree $(a,2)$ with $a\leq2$, hence
+      arithmetic genus at most one.
+\item Neither $\mathcal D$ nor a suitable pullback $\mathcal A$ of a minor of
+      \eqref{eq:hessian-veronese-ideal} vanishes identically in $R$.  Their
+      degrees in every individual root of $R$ are at most $3$ and $4$, so the
+      product $\mathcal{AD}$ vanishes on the whole degeneracy locus of (ii) and
+      has degree at most $7$ in every root.  Consequently a squarefree $R$ with
+      $\ell_{f,R}$ outside that locus exists over $\F_q$ as soon as
+      \[
+       q\geq\min\{7\cdot5+\tbinom52+1,\ 8\cdot5\}=\min\{46,40\}=40,
+       \autoeqtag{eq:hessian-selector-bound}
+      \]
+      where $40=8\cdot5$ counts field elements used as candidate root values,
+      split into five pairwise disjoint eight-element blocks.
+\item For such an $R$ the residual curve $\cC^{\mathrm{nv}}_{f,R}$ is
+      geometrically integral and its normalization has genus at most one.  The
+      affine parameters that fail to produce a squarefree witness are cut by
+      equations of total degree at most $5+2+2+10+4=23$.
+\item Every rational point of that normalization outside those parameters gives
+      a completely split squarefree octic in $W_f$ whose roots avoid the five
+      roots of $R$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i)  For a divided cubic $c=(A,B,C,D_3)$ the Hankel matrix is
+$H_c=\left(\begin{smallmatrix}A&B&C\\B&C&D_3\end{smallmatrix}\right)$, so its
+kernel in $\Sym^2E^\vee$ is spanned by the signed maximal minors
+$(BD_3+C^2,\;AD_3+BC,\;AC+B^2)$, which are the coefficients of the divided
+Hessian of $c$.  Substituting $c=c_{u,v}$ makes each minor a binary quadratic
+in $(u,v)$: the $u^2$ and $v^2$ terms are the minors of $U$ and of $V$, and the
+$uv$ term is their polarization, which is
+\eqref{eq:hessian-coefficients}.  A point of
+\eqref{eq:hessian-incidence} is a member of the pencil together with one
+ordered root of its residual quadratic, the equation is of degree two in each
+factor, and a $(2,2)$ curve on $\PP^1\times\PP^1$ has arithmetic genus one.
+Dividing $P_0X^2+P_1XY+P_2Y^2=0$ by $P_1^2/P_0$ and setting $y=P_0X/(P_1Y)$
+turns it into $y^2+y=P_0P_2/P_1^2$.
+
+(ii)  A vertical factor divides $P_0,P_1,P_2$ simultaneously, that is, the
+divided Hessian vanishes at the corresponding member of the pencil; its base
+locus is the twisted cubic $C_3$, so the vertical factors are exactly
+$\ell_{f,R}\cap C_3$.  A horizontal factor $m(X,Y)$ says that $m$ lies in the
+Hankel kernel of every member of the pencil, so it is a common kernel
+quadratic.  For the shift pencil \eqref{eq:hessian-shift-pencil} the two
+members $U$ and $V$ contribute the rows $(h_0,h_1,h_2)$, $(h_1,h_2,h_3)$ and
+$(h_1,h_2,h_3)$, $(h_2,h_3,h_4)$, so a common kernel quadratic is exactly a
+kernel vector of the matrix in \eqref{eq:hessian-terminal-determinant}: the
+horizontal-factor locus is $\mathcal D(R)=0$.  This family is a genuine third
+case, not part of $\Sigma$.  For instance $h_R=(1,0,0,0,1)$ gives the chord
+$\ell_{f,R}=\PP\langle e_0,e_3\rangle$, whose incidence is $uv\,XY=0$ and stays
+reducible after its two vertical factors are removed, while its Pl\"ucker
+vector $(0,0,1,0,0,0)$ satisfies neither
+\eqref{eq:hessian-veronese-ideal} nor \eqref{eq:hessian-complementary-ruling}.
+
+Away from that locus no horizontal factor occurs, and after the vertical
+factors are removed bidegree additivity makes any separable
+factorization $(1,1)+(1,1)$, so both factors are graphs of projectivities.
+Normalize the first to the identity by independent coordinate changes on the
+parameter and root lines.  Over an algebraically closed field of characteristic
+two the second projectivity is the identity, semisimple with two fixed points
+and conjugate to $g(t)=ct$ with $c\neq1$, or unipotent and conjugate to
+$g(t)=t+1$.  In the semisimple case normalize the two cubics at the fixed
+parameters to $U=(a,1,0,0)$ and $V=(0,0,\gamma,d)$, for which
+\eqref{eq:hessian-coefficients} gives
+\[
+ P_0=d\,uv+\gamma^2v^2,\qquad
+ P_1=(ad+\gamma)uv,\qquad
+ P_2=u^2+a\gamma\,uv .
+\]
+The graph of the identity is $uY+vX$ and the graph of the second projectivity
+is $uY+cvX$, so the comparison to make is with
+\[
+ (uY+vX)(uY+cvX)=cv^2X^2+(1+c)uvXY+u^2Y^2 ,
+\]
+the roles of $X$ and $Y$ being fixed by the convention of (i), in which
+$P_0$ is the coefficient of $X^2$.  Its $Y^2$ coefficient leaves no scalar
+freedom, and matching the three coefficients forces $d=0$, $\gamma^2=c$,
+$\gamma=1+c$ and $a\gamma=0$; since $c\neq0$ also $\gamma\neq0$, so $a=0$ and
+$c^2+c+1=0$.  The normalized line
+is spanned by $e_1$ and $e_2$, which is the member of $\Sigma$ attached to
+$Q=XY$.  The identity is the case $c=1$ of the same comparison and fails it.
+In the unipotent case the second graph is $(u+v)Y+vX$ and
+\[
+ (uY+vX)\bigl((u+v)Y+vX\bigr)=v^2X^2+v^2XY+(u^2+uv)Y^2 ,
+\]
+whose $XY$ coefficient is a multiple of $v^2$ while $P_1$ is a scalar multiple
+of $uv$, so the two cannot match and no such separable factorization exists.
+The case $P_1\equiv0$ is the inseparable locus, treated next.  Since the
+coordinate changes used are basis changes on $\ell_{f,R}$ and on $E$, and both
+\eqref{eq:hessian-incidence} and $\Sigma$ are equivariant for them, undoing the
+normalization introduces no further component.  Finally $P_1$ vanishes
+identically exactly when $\ell_{f,R}$ lies on the quadric $\mathcal Q_0$, whose Fano
+scheme is the two stated ruling conics; that is the inseparable case.  The
+Pl\"ucker equations are those of the parametrization
+$[z_0:\cdots:z_5]=[a^2:ab:ac:b^2+ac:bc:c^2]$ of $\Sigma$ attached to
+$Q=aX^2+bXY+cY^2$, and of the two rulings of $\mathcal Q_0$.  For the shift
+pencil the inseparable case needs no separate equation: expanding the
+determinant \eqref{eq:hessian-terminal-determinant} gives
+\[
+ \mathcal D=h_0h_2h_4+h_0h_3^2+h_1^2h_4+h_2^3
+ =h_1e_3+h_2e_2+h_3e_1
+\]
+with $e_1,e_2,e_3$ the coefficients of $P_1$ named in (ii), so $P_1\equiv0$
+implies $\mathcal D=0$ and both Fano rulings lie in $\mathcal D=0$.  The
+degeneracy locus of (ii) is therefore contained in the union of
+$\mathcal D=0$ and $\Sigma$.  Containment in that union is all the selector
+argument uses; no equality is claimed, and indeed $\mathcal D=0$ also meets
+lines that are not degenerate.
+
+Finally, dividing out the common factor of $P_0,P_1,P_2$ in $(u,v)$ removes
+exactly the vertical components, so $\cC^{\mathrm{nv}}_{f,R}$ is what the
+integrality statement applies to, and its bidegree $(a,2)$ with $a\leq2$ gives
+arithmetic genus at most one.
+
+(iii)  The pencil \eqref{eq:hessian-root-line} is spanned by
+$\iota_{Rx}f$ and $\iota_{Ry}f$, each linear in the coefficients of $R$,
+so its Pl\"ucker coordinates are quadratic in those coefficients, and the
+quadratic equations of \eqref{eq:hessian-veronese-ideal} pull back to degree at
+most four in them.  Suppose every pullback of a minor of
+\eqref{eq:hessian-veronese-ideal} vanished identically in $R$.  Then the
+generic root-line lies in $\Sigma$, so every iterated contraction pencil has a
+common quadratic; Proposition~\ref{prop:contained-rank-two} applied to the
+overlapping contraction flags returns the persistent rank-two carrier, and
+when a consecutive contraction coefficient vanishes in the ground
+characteristic the same overlap equations and Lucas' theorem return the
+contraction-kernel nucleus flags, so $f\in\cP_{10}\cup\cM^{\max}_{10,2}$.
+Suppose instead that $\mathcal D$ vanished identically on squarefree $R$.  Split forms
+are dense, so $\mathcal D$ vanishes for every $R$, that is every bottom
+syndrome $\iota_Rf$ lies in the prime cubic $V(D)$ of
+Proposition~\ref{prop:reduced-terminal-carrier}.  The attainable bottom
+syndromes close to the projectivized row space of the marker catalecticant
+\eqref{eq:marker-catalecticant}, so that row space lies in the reduced terminal
+carrier, and Proposition~\ref{prop:recursive-component-selection} puts $f$ in
+$\cP_{10}\cup\cM^{\max}_{10,2}$.  Both alternatives are excluded, so
+nonzero $\mathcal A$ and $\mathcal D$ exist.  Each coefficient of
+$h_R$ is linear in the coefficients of $R$, so $\mathcal D$, a $3\times3$
+determinant in those coefficients, has degree at most three in every root,
+while $\mathcal A$ has degree at most four; by the containment established in
+(ii) their product vanishes on the whole degeneracy locus and has degree at
+most seven in each root.
+
+Write $R=\prod_{i=1}^5(t+r_i)$, so each coefficient of $R$ is at most linear in
+each $r_i$ and $\mathcal{AD}$ has degree at most seven in each $r_i$
+separately, hence total degree at most $7\cdot5=35$ in the five roots
+together.  The
+Vandermonde $\prod_{i<j}(r_i+r_j)$ has total degree $\binom52=10$, so
+Schwartz--Zippel, which reads the total degree, gives a squarefree base once
+$q>35+10=45$.  Alternatively
+partition $8\cdot5=40$ field elements into five pairwise disjoint
+eight-element blocks $S_1,\ldots,S_5$, which reads the individual degrees
+instead: a nonzero polynomial of degree at most
+seven in each
+variable cannot vanish on $S_1\times\cdots\times S_5$, since successive
+univariate interpolation would make it zero, and disjointness makes every tuple
+have distinct coordinates.  This gives
+\eqref{eq:hessian-selector-bound}; the quantity being counted is available
+field elements serving as candidate roots, not deleted points and not
+projective points.
+
+(iv)  For such an $R$ the residual curve $\cC^{\mathrm{nv}}_{f,R}$ is
+geometrically integral by (ii), so its normalization has genus at most one,
+its Artin--Schreier class $P_0P_2/P_1^2$ is nonconstant, and the cover is
+neither reducible nor a constant-field extension.  Write $\lambda=(u:v)$ for
+the base parameter and $h_\lambda=P_0X^2+P_1XY+P_2Y^2$.  The parameters to
+delete are
+\[
+\begin{array}{lll}
+\text{failure}&\text{equation}&\deg_\lambda\\\hline
+\text{moving root meets a marker}&R(\lambda)=0&5\\
+\text{residual quadratic degenerates}&P_0(\lambda)=0&2\\
+\text{residual quadratic is a square}&P_1(\lambda)=0&2\\
+\text{a residual root meets a marker}&\Res_X(h_\lambda,R)=0&10\\
+\text{a residual root meets the moving root}&h_\lambda(\lambda)=0&4
+\end{array}
+\]
+of total degree $23$.  The degrees are read off from
+\eqref{eq:hessian-coefficients}: $P_0$ and $P_1$ are binary quadratics in
+$\lambda$; the resultant of the quadratic $h_\lambda$ with the quintic $R$ is
+of degree two in the coefficients of $R$ and of degree five in those of
+$h_\lambda$, hence of degree $10$ in $\lambda$; and evaluating $h_\lambda$ at
+$\lambda$ itself adds two to the degree two of its coefficients.  None of the
+five vanishes identically, and integrality is what rules each out: $R$ is
+squarefree of degree five and nonzero; $P_0\equiv0$ would leave
+$Y(P_1X+P_2Y)=0$, so $\cC^{\mathrm{nv}}_{f,R}$ would contain the horizontal
+line $Y=0$; $P_1\equiv0$ is the inseparable degeneracy already excluded by
+$\mathcal{AD}\neq0$; $\Res_X(h_\lambda,R)\equiv0$ would put one of the five
+horizontal lines $X=r_iY$ inside $\cC^{\mathrm{nv}}_{f,R}$; and
+$h_\lambda(\lambda)\equiv0$
+would put the diagonal inside it.  An integral curve of bidegree $(a,2)$
+contains no such component.  A parameter divided out as a vertical factor has
+$P_0=P_1=P_2=0$, so it is already counted among the $P_0=0$ and $P_1=0$
+parameters and needs no separate budget.  The displayed degrees are those of
+the affine equations; each such parameter carries at most two points of the
+slice, and at most two more lie over the parameter at infinity, so at most
+$2\cdot23+2=48$ rational points are lost.
+
+(v)  A surviving rational point is a parameter $\lambda$ with
+$R(\lambda)\neq0$ together with a rational root of $h_\lambda$; since
+$P_0(\lambda)\neq0$ and the coefficients are rational, the second root is
+rational too, and $P_1(\lambda)\neq0$ makes the two distinct.  By (i) the
+quadratic $h_\lambda$ spans the Hankel kernel of $\iota_{R\lambda}f$, so six
+applications of \eqref{eq:lift} give $R\lambda h_\lambda\in W_f$.  Its degree
+is $5+1+2=8$, it
+splits completely, and the deleted divisors make its eight roots distinct: the
+markers are distinct because $R$ is squarefree, $\lambda$ avoids them, and both
+residual roots avoid the markers and $\lambda$.
+\end{proof}
+
 \begin{proposition}[R10 fixed-depth escape]\label{prop:r10-escape}
 For odd \(q\geq59\), and for even \(q\geq64\), every split-free
 redundancy-ten syndrome belongs to
@@ -630,20 +1229,21 @@ Since
                               q+1-2\sqrt q>42
 \]
 first holds at a prime power \(q=59\), the odd assertion follows.
-In characteristic two the ordered-Hessian base selector requires
-\[
-\min\{(9-4)(9+11)/2+1,\;9(9-4)\}=45
-\]
-parameters, and its reduced \((2,2)\) slice deletes
-\(5+2+2+10+4=23\) points.  The first binary field satisfying both
-conditions is \(64\).  The selector is obtained by pulling back one nonzero
-equation from each of the common-quadratic and complementary Fano rulings:
-their product has individual root degree eight, so Schwartz--Zippel or
-nine-element block interpolation gives the displayed bound.  The normalized
-\((2,2)\) ordered-Hessian slice has genus at most one, and its five deletion
-degrees are exactly the displayed summands.  Proposition~\ref{prop:recursive-component-selection}
-then identifies the sole contained locus in either case as the displayed
-carrier union.
+In characteristic two the argument above is not used.  Lemma~\ref{lem:r10-hessian}
+applies directly to $f$: it chooses all five roots of its base at once, and its
+witness lies in $W_f$ by repeated application of \eqref{eq:lift}, so it needs
+neither the stagewise marker selection nor the intermediate lower packages.
+Its selector is nonzero as soon as
+$q\geq\min\{46,40\}=40$ field elements are available as candidate roots, and
+for such a base it gives a geometrically integral ordered-Hessian slice whose
+normalization has genus at most one and whose deletion divisor has degree
+$5+2+2+10+4=23$ on the base line, hence at most $2\cdot23+2=48$ deleted
+rational points.  Since $64+1-2\sqrt{64}=49>48$, and since $32$ has fewer than
+$40$ elements while $64$ has more, both conditions first hold at
+$q=64$; part (v) of the lemma turns a surviving point into a split squarefree
+octic in $W_f$ avoiding all five markers.  In both characteristics
+Proposition~\ref{prop:recursive-component-selection}
+identifies the sole contained locus as the displayed carrier union.
 \end{proof}
 
 \begin{proposition}[Characteristic-seven coherent lift at R10]

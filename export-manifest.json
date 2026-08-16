@@ -44,7 +44,7 @@
       "mode": "100644",
       "path": "PROVENANCE.md",
       "role": "provenance",
-      "sha256": "60b7448d33fadf3be57fd95f5418e9a9d5d5655c5b9dde2612cfa4939ee68b7a",
+      "sha256": "d7fc358585fbd8bc3cc3d4b6e27d78b0e5d16c288f77a958cf99e31a549ca3e8",
       "source_blob": null
     },
     {
@@ -156,22 +156,22 @@
       "source_blob": "fb54719a162f87a1c90eba2af2ab19c38eb14b25"
     },
     {
-      "bytes": 581092,
+      "bytes": 625564,
       "mode": "100644",
       "path": "prs-beyond-redundancy-four-tit-submission.pdf",
       "rewrites": [],
       "role": "release-output",
-      "sha256": "b67e7fc2ec44ceb8ed251e5b340adad9ae7b49ed218076108dcd2271f1901b14",
-      "source_blob": "39789ed701c18e2d4693ae2661810a0df0a6cf65"
+      "sha256": "634c5220986b38dc4cde3e2267527e3fc25c1ac6dd6645a2147b76e5816cb4ff",
+      "source_blob": "4660b31103f432c4c82c616333d2b6cc3dbca502"
     },
     {
-      "bytes": 421777,
+      "bytes": 471926,
       "mode": "100644",
       "path": "prs-beyond-redundancy-four.pdf",
       "rewrites": [],
       "role": "release-output",
-      "sha256": "db5058d7bc6f54c9c1b7cc9d8c0b9f90c45661766bc64c73a67e5fd3dd83de69",
-      "source_blob": "b74935f71cb68c582c1cf1c1764c9991025a89ef"
+      "sha256": "fae8e8ae26a204d7a33971f7b3519d902a4e3acf79a1d368bd692f06aceb4e61",
+      "source_blob": "7fc5415a89a572b97dee54fa728ce9c826248d73"
     },
     {
       "bytes": 11846,
@@ -197,8 +197,8 @@
       "path": "sections/02-overview.tex",
       "rewrites": [],
       "role": "manuscript-source",
-      "sha256": "d4dec3f1b7c2220762ca7a362b94e3b87a2dcdd72f9d2d0de8a442bc8f45ae1f",
-      "source_blob": "4571de1e9b937258971374bc48890bafd81c5d67"
+      "sha256": "03dc90ccafd50763466dfcff1ae21ceb3414c9abcc25075d4b70285beb01f5e8",
+      "source_blob": "0b4245ee8100268c5091ba61184df378aa08fb82"
     },
     {
       "bytes": 5548,
@@ -215,8 +215,8 @@
       "path": "sections/04-redundancy-five.tex",
       "rewrites": [],
       "role": "manuscript-source",
-      "sha256": "dd8786e9d12e757dae7238c757a3e34bba9f4252274de2adcd0261b1fb27a6ff",
-      "source_blob": "60df2e06c5e14cf6999dcf9c48a8b9f9cdcbe136"
+      "sha256": "8e8cd14877dadb7095855ba20fc433fb9b9a55e5d263c738fd0578e0b1e54933",
+      "source_blob": "39f1ea726eef0e2b999132bd77dc39a1069fdb8c"
     },
     {
       "bytes": 21523,
@@ -237,22 +237,22 @@
       "source_blob": "570ba924d6f02be0e380a91963466ff949a5e54a"
     },
     {
-      "bytes": 39293,
+      "bytes": 39689,
       "mode": "100644",
       "path": "sections/07-fixed-level-eight-nine.tex",
       "rewrites": [],
       "role": "manuscript-source",
-      "sha256": "708e317b17915ddd36d6988954e31eddbf8b3a78dc7781daf9ffe33bf5deede8",
-      "source_blob": "d45c75ef755a52e3a77537b3b8c7e98c6eab0f25"
+      "sha256": "8d3879ec2b524ab9e5c164812cb21a754c0a00c7cf37f2ac7e5e24358a0cfd09",
+      "source_blob": "a1785c8310a44e478fe308820f8fb7e110c26f2d"
     },
     {
-      "bytes": 15465,
+      "bytes": 15591,
       "mode": "100644",
       "path": "sections/07-recursive-carriers.tex",
       "rewrites": [],
       "role": "manuscript-source",
-      "sha256": "7616582be79a2f717675a9ee1c815fedbb00a5a4400a025482e61fcd64244628",
-      "source_blob": "5f580a3a636d1c3326979262b1ca06d8453b0d16"
+      "sha256": "06e8dc58d3b7a555000d512cca23219e130192ef37c36fd77e7b5eaea618cb90",
+      "source_blob": "69ad8f709195d05e62614e45cf89c04e71c56a27"
     },
     {
       "bytes": 4005,
@@ -273,13 +273,13 @@
       "source_blob": "a2e593449eaab2d9a2c1d93f143de3a234bb3677"
     },
     {
-      "bytes": 27659,
+      "bytes": 59524,
       "mode": "100644",
       "path": "sections/09-lucas-carriers.tex",
       "rewrites": [],
       "role": "manuscript-source",
-      "sha256": "fe3501b6df6bebb75aa934cbdb82e7ecae6d066c7b053b5ca6cea0f96c10535f",
-      "source_blob": "699e28444cb91d7e9029b1f7e975b2e8c61a79be"
+      "sha256": "1df324daf843cf65dd20029f2ce32ebaaf15b07607cfcb304076bd37aac389dd",
+      "source_blob": "785e365900686db1260deebfe1a724ff682fd5f1"
     },
     {
       "bytes": 5530,
@@ -377,8 +377,8 @@
       "path": "supplement/EVIDENCE-MANIFEST.json",
       "rewrites": [],
       "role": "verification",
-      "sha256": "e987c3f85bcce7ea0fa0ef98f0c55db774e7fa95586ea1462c02cadf8e923d2e",
-      "source_blob": "cef46e6015fb20fc45e069d8efe3f080a85000db"
+      "sha256": "b2f063aecc881c77a2c8544195a40e8215a2d5196e7b074acef4ed71ec601c42",
+      "source_blob": "dec40a48e3b2c8bc021905359ad93f4c9bb3d617"
     },
     {
       "bytes": 14280,
@@ -386,17 +386,17 @@
       "path": "supplement/EVIDENCE-ROWS.md",
       "rewrites": [],
       "role": "support",
-      "sha256": "23a6f884d5dbae9b0b6162685189ad4a591f5e6f0942d000640661713fb9f78b",
-      "source_blob": "35698a42097fcd1a5079ecccd79ec5514c928d07"
+      "sha256": "f477c19d75e2eb27e5961b896257e4bc0f7bd8dac51dd421b2924da323b21bc9",
+      "source_blob": "f606610a535b8ce565a74a622db308ec296ec5ab"
     },
     {
-      "bytes": 21435,
+      "bytes": 22077,
       "mode": "100644",
       "path": "supplement/LEAN-STATEMENTS.md",
       "rewrites": [],
       "role": "support",
-      "sha256": "e046c44b3c72509d0cbd1fde18809276f59b2addfea5c87eea3298a289efc11f",
-      "source_blob": "658b96b7759ad585779c7386cd40419b2866326a"
+      "sha256": "64298d9de6ac985ae3d3fbb545df72bf7078319a9e383d6d2cfce99b64a76214",
+      "source_blob": "62ab929ee26aa5e2a2e034fb90fb02eacf293e3b"
     },
     {
       "bytes": 5436,
@@ -413,8 +413,8 @@
       "path": "supplement/RELEASE-MANIFEST.md",
       "rewrites": [],
       "role": "support",
-      "sha256": "270bfa84429a903a00adecadf95099d8a65abf946599132124e579571ca6ad23",
-      "source_blob": "f8ca84144703f745d9826e1b8662c8a1552e971c"
+      "sha256": "0393dff6fef99cfea7770d1af6d858222ef140c5c55c8ca7330448fb1cb63ea0",
+      "source_blob": "5c87e7135a5e6ac849480a9807c1cb799c00ef99"
     },
     {
       "bytes": 9092,
@@ -1016,8 +1016,8 @@
       "path": "supplement/verify.py",
       "rewrites": [],
       "role": "verification",
-      "sha256": "12d4161b5401a34d24fb535efe8ec5dd72a464269d0621175c2b95778afe0d5f",
-      "source_blob": "4d58b277d2c9220bc5f06a91f7ce763b6bce46a7"
+      "sha256": "85994615bee2ed33efd74ab102937fe8365113c4d71a6d2d92671fc5b7fb1aa4",
+      "source_blob": "9b6c0aab7b3acc0cef5e420eac833215b43ff2ed"
     }
   ],
   "github": "tavisrudd/beyond4-prs",
@@ -1035,5 +1035,5 @@
   "repository": "beyond4-prs",
   "repository_map_sha256": "b1287d69c4398954d5ac0d89e29bbd2425c5da957d3e7a6380f638513346803a",
   "schema_version": 1,
-  "source_commit": "a4510f9f3c588e9c070b5d85e97c3fb7527a41b7"
+  "source_commit": "2ab6d814e7f191e4d95083824e73cf75fcb30881"
 }
